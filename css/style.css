@@ -45,13 +45,14 @@ header, main, footer {
   margin: 0 auto;
 }
 
-
-
 .page-header:after {
-  content: '';
-  width: 1160px;
-  height: 300px;
-  background: #FFE17F;
+    content: '';
+    width: 1160px;
+    height: 300px;
+    background: #FFE17F;
+    position: absolute;
+    z-index: -1;
+    top: 28px;
 }
 
 .top-panel {
@@ -73,6 +74,7 @@ header, main, footer {
   position: relative;
   border: none;
   padding: 0px 0px;
+  background: unset;
 }
 
 .top-panel-input::placeholder {
@@ -134,6 +136,11 @@ header, main, footer {
 }
 
 
+.content-main-slider-box {
+  position: relative;
+}
+
+
 .main-slider-item {
   display: flex;
   flex-wrap: nowrap;
@@ -148,18 +155,82 @@ header, main, footer {
 
 
 .main-slider-number {
-  font-weight: 700;
-  font-size: 180px;
-  line-height: 30px;
-  display: flex;
-  align-items: center;
-  text-align: right;
-  color: #FFFFFF;
+    font-weight: 700;
+    font-size: 180px;
+    line-height: 30px;
+    display: block;
+    color: #FFFFFF;
+    position: absolute;
+    z-index: -1;
+    margin-right: auto;
+    right: 0px;
+    top: 40px;
 }
+
 
 .item-main-slider-title {
   font-weight: 800;
   font-size: 50px;
   line-height: 50px;
   color: #000000;
+  margin-top: 80px;
+  margin-bottom: 30px;
+}
+
+
+.image-main-slider-product {
+  position: relative;
+  top: -45px;
+}
+
+
+.read-more {
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin-bottom: 65px;
+  text-decoration: none;
+  color: #000000;
+  display: block;
+  width: 220px;
+  position: relative;
+}
+
+
+.read-more:after {
+  content: "";
+  display: block;
+  width: 220px;
+  border-bottom: 8px solid #FFE17F;
+  position: absolute;
+  z-index: -1;
+  top: 6px;
+}
+
+
+.products-image-wrapper {
+  width: 160px;
+  height: 160px;
+  background: #FFE17F;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.products-item:nth-child(2) img {
+  align-self: end;
+}
+
+.products-title {
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: -0.02em;
+  color: #000000;
+  max-width: 160px;
+  display: block;
+  margin-top: 30px;
 }
