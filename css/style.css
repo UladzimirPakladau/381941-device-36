@@ -594,6 +594,24 @@ li.about-item {
 }
 
 
+.subscribe-free {
+  position: relative;
+}
+
+.subscribe-free:before {
+  content: '';
+  background-image: url(../img/misc/tick.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 16px;
+  height: 16px;
+  display: block;
+  position: absolute;
+  bottom: 7px;
+  left: -22px;
+}
+
+
 .subscribe {
   padding-top: 70px;
   padding-bottom: 70px;
