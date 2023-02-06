@@ -401,6 +401,7 @@ button.main-slider-arrow.right {
   font-size: 50px;
   line-height: 50px;
   color: #000000;
+  margin-top: 0px;
 }
 
 
@@ -437,15 +438,30 @@ button.main-slider-arrow.right {
 
 .tabs input:checked + label { 
   color: #FFE17F;
-  background: #000000; 
+  background: #000000;
+  height: 30px;
+  display: block;
+  padding-top: 10px;
 } 
+
+
+.tabs:before {
+  content: '';
+  position: absolute;
+  border-left: 7px solid black;
+  height: 224px;
+  width: 7px;
+  display: block;
+  left: 273px;
+}
 
 
 .advantages-button { 
   display: block;
   width: 280px;
   cursor: pointer;
-  font-family: 'Raleway';; 
+  font-family: 'Raleway';
+  margin-bottom: 30px; 
 } 
 
 
