@@ -413,7 +413,7 @@ button.main-slider-arrow.right {
 
 .tabs {
   position: relative;
-  height: 390px; 
+  height: 230px; 
 }
 
 .tabs input { 
@@ -422,17 +422,20 @@ button.main-slider-arrow.right {
 
 
 .advantages-content-box { 
-  display: none;
+  visibility: hidden;
   padding: 15px; 
   background: white; 
   position: absolute; 
   top: 0; 
-  left: 280px;  
+  left: 350px;
+  display: flex;
+  justify-content: space-between;
+  gap: 100px;  
 } 
 
 
 #tab1:checked ~ #content1, #tab2:checked ~ #content2, #tab3:checked ~ #content3 { 
-  display: block; 
+  visibility: inherit; 
 } 
 
 
@@ -464,6 +467,10 @@ button.main-slider-arrow.right {
   margin-bottom: 30px; 
 } 
 
+
+.advantages-content-box-left {
+  max-width: 452px;
+}
 
 .infobox {
   display: flex;
