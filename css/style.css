@@ -40,7 +40,7 @@ body {
 }
 
 
-header, main, .page-footer-wrapper {
+header, main, .page-footer-wrapper, .subscribe-wrapper {
   max-width: 1160px;
   margin: 0 auto;
 }
@@ -590,13 +590,18 @@ li.about-item {
 .subscribe-row {
   display: flex;
   justify-content: space-between;
+  gap: 180px;
 }
-
 
 
 .subscribe {
   padding-top: 70px;
   padding-bottom: 70px;
+  background: #F0F0F0;
+}
+
+.subscribe-free {
+  align-self: center;
 }
 
 
@@ -606,6 +611,7 @@ li.about-item {
   font-size: 50px;
   line-height: 50px;
   color: #000000;
+  margin-top: 0px;
 }
 
 
@@ -616,6 +622,7 @@ li.about-item {
   font-size: 18px;
   line-height: 30px;
   color: #444444;
+  margin-top: 0px;
 }
 
 
@@ -623,6 +630,24 @@ li.about-item {
   display: flex;
   justify-content: space-between;
   position: relative;
+}
+
+
+.subscribe-form-box-label input {
+  background: none;
+  border: none;
+  padding: 23px 17px;
+  width: 523px;
+}
+.subscribe-form-box-label {
+  border-bottom: 3px solid #C4C4C4;
+}
+
+
+.subscribe-form-button {
+  border: 3px solid #C4C4C4;
+  padding: 18px 39px;
+  width: auto;
 }
 
 
