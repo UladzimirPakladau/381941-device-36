@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<title>HTML Academy: Девайс</title>
-	<link rel="stylesheet" href="/css/style.css">
+	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
@@ -16,7 +16,7 @@
 				<form class="top-panel-form" action="https://echo.htmlacademy.ru/" method="POST">
 					<label class="top-panel-label">
 						<span class="visually-hidden">Поиск</span>
-						<input class="top-panel-input" type="search" placeholder="Поиск по сайту">
+						<input class="top-panel-input" type="search" placeholder="     Поиск по сайту">
 					</label>
 					<button class="top-panel-button" type="submit">Найти</button>
 				</form>
@@ -33,7 +33,7 @@
 			</div>
 
 			<div class="cart-btn-box">
-				<a class="cart-link" href="#"><span class="added-item-amount"></span>Корзина</a>
+				<a class="cart-link" href="#"><span class="added-item-amount">2</span>Корзина</a>
 			</div>
 
 		</div>
@@ -74,7 +74,9 @@
 
 				<div class="main-slider-item active">
 					<div class="image-main-slider-box">						
-						<img class="image-main-slider-product" src="img/slider/kvadrokopter.png" width="560" height="560" alt="Белый квадрокоптер, который оснащен камерой и лазером" />								
+						<img class="image-main-slider-product" src="img/slider/kvadrokopter.png" width="560" height="560" alt="Белый квадрокоптер, который оснащен камерой и лазером" />
+						<button class="main-slider-arrow left" aria-label="Назад"></button>
+						<button class="main-slider-arrow right" aria-label="Вперед"></button>								
 					</div>
 
 					<div class="content-main-slider-box">
@@ -101,7 +103,9 @@
 
 				<div class="main-slider-item visually-hidden">
 					<div class="image-main-slider-box">						
-						<img class="image-main-slider-product" src="img/slider/fitness-band.png" width="560" height="560" alt="Чёрный фитнес браслет с надписью" />								
+						<img class="image-main-slider-product" src="img/slider/fitness-band.png" width="560" height="560" alt="Чёрный фитнес браслет с надписью" />
+						<button class="main-slider-arrow left" aria-label="Назад"></button>
+						<button class="main-slider-arrow right" aria-label="Вперед"></button>								
 					</div>
 
 					<div class="content-main-slider-box">
@@ -124,7 +128,9 @@
 				</div>
 				<div class="main-slider-item visually-hidden">
 					<div class="image-main-slider-box">						
-						<img class="image-main-slider-product" src="img/slider/selfie-stick.png" width="560" height="560" alt="Чёрная палка для селфи со штативом" />								
+						<img class="image-main-slider-product" src="img/slider/selfie-stick.png" width="560" height="560" alt="Чёрная палка для селфи со штативом" />
+						<button class="main-slider-arrow left" aria-label="Назад"></button>
+						<button class="main-slider-arrow right" aria-label="Вперед"></button>								
 					</div>
 
 					<div class="content-main-slider-box">
@@ -154,10 +160,7 @@
 					<button class="main-slider-control-button active" aria-label="Товар 1"></button>
 					<button class="main-slider-control-button" aria-label="Товар 2"></button>
 					<button class="main-slider-control-button"aria-label="Товар 3"></button>
-				</div>
-
-				<button class="main-slider-arrow left" aria-label="Назад"></button>
-				<button class="main-slider-arrow right" aria-label="Вперед"></button>
+				</div>				
 
 
 			</div>	
@@ -198,7 +201,9 @@
 				</li>
 
 				<li class="products-item">
-					<img src="img/popular-products/fitness-watch.svg" width="56.01" height="97.98" alt="Иконка умные часы" />
+					<div class="products-image-wrapper">
+						<img src="img/popular-products/fitness-watch.svg" width="56.01" height="97.98" alt="Иконка умные часы" />
+					</div>
 					<span class="products-title">Умные часы</span>				
 				</li>
 
@@ -215,32 +220,36 @@
 		<!-- Начало блока преимуществ -->
 		<section class="advantages">
 			<div class="advantages-container"> 
-				<div class="tabs"> 
-					<input id="tab1" type="radio" name="tabs" checked> 
-					<label class="advantages-button button" for="tab1">Доставка</label> 
-					<input id="tab2" type="radio" name="tabs"> 
-					<label class="advantages-button button" for="tab2">Гарантия</label> 
-					<input id="tab3" type="radio" name="tabs"> 
-					<label class="advantages-button button" for="tab3">Кредит</label> 				
+				<div class="tabs">
+
+					
+						<input id="tab1" type="radio" name="tabs" checked> 
+						<label class="advantages-button button" for="tab1">Доставка</label> 
+						<input id="tab2" type="radio" name="tabs"> 
+						<label class="advantages-button button" for="tab2">Гарантия</label> 
+						<input id="tab3" type="radio" name="tabs"> 
+						<label class="advantages-button button" for="tab3">Кредит</label> 	
+								
 				
-				<div class="advantages-content-box" id="content1">
-					<h3 class="advantages-content-box-title">Доставка</h3>
-					<p class="advantages-content-box-description">Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
-					<img src="img/advantages/delivery.svg" width="118.46" height="121.12" alt="Иконка доставщика" />	
-				</div>
+					
+						<div class="advantages-content-box" id="content1">
+							<h3 class="advantages-content-box-title">Доставка</h3>
+							<p class="advantages-content-box-description">Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
+							<img src="img/advantages/delivery.svg" width="118.46" height="121.12" alt="Иконка доставщика" />	
+						</div>
 
-				<div class="advantages-content-box" id="content2">
-					<h3 class="advantages-content-box-title">Гарантия</h3>				
-					<p class="advantages-content-box-description">Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый. Товар, не дом, конечно же.</p>
-					<img src="img/advantages/garanty.svg" width="171" height="195" alt="Иконка гарантии" /> 
-				</div>  
+						<div class="advantages-content-box" id="content2">
+							<h3 class="advantages-content-box-title">Гарантия</h3>				
+							<p class="advantages-content-box-description">Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый. Товар, не дом, конечно же.</p>
+							<img src="img/advantages/garanty.svg" width="171" height="195" alt="Иконка гарантии" /> 
+						</div>  
 
-				<div class="advantages-content-box" id="content3">
-					<h3 class="advantages-content-box-title">Кредит</h3>				
-					<p class="advantages-content-box-description">Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для банка, разумеется.</p>
-					<img src="img/advantages/credit.svg" width="156" height="188" alt="Иконка кредита" /> 
-				</div> 
-
+						<div class="advantages-content-box" id="content3">
+							<h3 class="advantages-content-box-title">Кредит</h3>				
+							<p class="advantages-content-box-description">Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для банка, разумеется.</p>
+							<img src="img/advantages/credit.svg" width="156" height="188" alt="Иконка кредита" /> 
+						</div>
+					
 				</div> 
 			</div>
 		</section>	  
@@ -323,54 +332,56 @@
 	
 	
 	<footer class="page-footer">
-		<div class="footer-contacts">			
-			<img class="footer-contacts-logo" src="img/footer/footer-logo.svg" width="145" height="36" alt="Интернет - магазин «Device»">
-			<address class="footer-contacts-address">Санкт-Петербург, набережная реки Карповки, 5, литера П.
-			</address>
+		<div class="page-footer-wrapper">
+			<div class="footer-contacts">			
+				<img class="footer-contacts-logo" src="img/footer/footer-logo.svg" width="145" height="36" alt="Интернет - магазин «Device»">
+				<address class="footer-contacts-address">Санкт-Петербург, набережная реки Карповки, 5, литера П.
+				</address>
 
-		</div>
-
-		<div class="footer-navigation">
-			<div class="additional-menu">
-				<ul class="additional-menu-lists">
-					<li class="additional-menu-item">
-						<a class="additional-menu-item-link" href="#">Доставка</a>
-					</li>
-					<li class="additional-menu-item">
-						<a class="additional-menu-item-link" href="#">Гарантия</a>
-					</li>
-					<li class="additional-menu-item">
-						<a class="additional-menu-item-link" href="#">Контакты</a>
-					</li>
-				</ul>
-
-				<ul class="footer-social-list">
-					<li class="footer-social-item">
-						<a target="_blank" rel="nofollow noopener" class="footer-social-link" href="#">
-							<span class="visually-hidden">Телеграм</span>
-						</a>
-					</li>
-					<li class="footer-social-item">
-						<a target="_blank" rel="nofollow noopener" class="footer-social-link" href="#">
-							<span class="visually-hidden">Ютуб</span>
-						</a>
-					</li>
-					<li class="footer-social-item">
-						<a target="_blank" rel="nofollow noopener" class="footer-social-link" href="#">
-							<span class="visually-hidden">Твитер</span>
-						</a>
-					</li>
-				</ul>		
 			</div>
-		</div>
 
-		<div class="footer-copyright">			
-			<a class="footer-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>      
-			<p class="footer-text">
-				<a class="footer-copyright-link" href="https://htmlacademy.ru/"><img src="img/footer/html-academy-logo.svg" width="115" height="33" alt="html academy" />
-				</a>
-			</p>
-		</div>
+			<div class="footer-navigation">
+				<div class="additional-menu">
+					<ul class="additional-menu-lists">
+						<li class="additional-menu-item">
+							<a class="additional-menu-item-link" href="#">Доставка</a>
+						</li>
+						<li class="additional-menu-item">
+							<a class="additional-menu-item-link" href="#">Гарантия</a>
+						</li>
+						<li class="additional-menu-item">
+							<a class="additional-menu-item-link" href="#">Контакты</a>
+						</li>
+					</ul>
+
+					<ul class="footer-social-list">
+						<li class="footer-social-item">
+							<a target="_blank" rel="nofollow noopener" class="footer-social-link telegram" href="#">
+								<span class="visually-hidden">Телеграм</span>
+							</a>
+						</li>
+						<li class="footer-social-item">
+							<a target="_blank" rel="nofollow noopener" class="footer-social-link twitter" href="#">
+								<span class="visually-hidden">Ютуб</span>
+							</a>
+						</li>
+						<li class="footer-social-item">
+							<a target="_blank" rel="nofollow noopener" class="footer-social-link youtube" href="#">
+								<span class="visually-hidden">Твитер</span>
+							</a>
+						</li>
+					</ul>		
+				</div>
+			</div>
+
+			<div class="footer-copyright">			
+				<a class="footer-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>      
+				<p class="footer-text">
+					<a class="footer-copyright-link" href="https://htmlacademy.ru/"><img src="img/footer/html-academy-logo.svg" width="115" height="33" alt="html academy" />
+					</a>
+				</p>
+			</div>
+		</div>	
 	</footer>
 	
 </body>
