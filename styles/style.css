@@ -37,11 +37,21 @@ body {
   font-size: 16px;
   line-height: 30px;
   color: #444444;
+  margin: 0;
 }
 
-
+/*
 header, main, .page-footer-wrapper, .subscribe-wrapper {
   max-width: 1160px;
+  margin: 0 auto;
+}*/
+
+
+.container {
+  width: 100%;
+  max-width: 1440px;
+  padding: 0 140px;
+  box-sizing: border-box;
   margin: 0 auto;
 }
 
