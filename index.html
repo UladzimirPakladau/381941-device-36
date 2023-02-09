@@ -4,6 +4,7 @@
 	<meta charset="utf-8">
 	<title>HTML Academy: Девайс</title>
 	<link rel="stylesheet" href="styles/style.css">
+	<script type="text/javascript" src="js/slider.js"></script>
 </head>
 <body>
 
@@ -77,8 +78,8 @@
 				<div class="main-slider-item active">
 					<div class="image-main-slider-box">
 						<img class="image-main-slider-product" src="img/slider/kvadrokopter.png" width="560" height="560" alt="Белый квадрокоптер, который оснащен камерой и лазером" />
-						<button class="main-slider-arrow left" aria-label="Назад"></button>
-						<button class="main-slider-arrow right" aria-label="Вперед"></button>
+						<button onclick="currentSlide(3)" class="main-slider-arrow left" aria-label="Назад"></button>
+						<button onclick="currentSlide(2)" class="main-slider-arrow right" aria-label="Вперед"></button>
 					</div>
 
 					<div class="content-main-slider-box">
@@ -103,11 +104,11 @@
 
 				</div>
 
-				<div class="main-slider-item visually-hidden">
+				<div class="main-slider-item">
 					<div class="image-main-slider-box">
 						<img class="image-main-slider-product" src="img/slider/fitness-band.png" width="560" height="560" alt="Чёрный фитнес браслет с надписью" />
-						<button class="main-slider-arrow left" aria-label="Назад"></button>
-						<button class="main-slider-arrow right" aria-label="Вперед"></button>
+						<button onclick="currentSlide(1)" class="main-slider-arrow left" aria-label="Назад"></button>
+						<button onclick="currentSlide(3)" class="main-slider-arrow right" aria-label="Вперед"></button>
 					</div>
 
 					<div class="content-main-slider-box">
@@ -128,11 +129,11 @@
 						</table>
 					</div>
 				</div>
-				<div class="main-slider-item visually-hidden">
+				<div class="main-slider-item">
 					<div class="image-main-slider-box">
 						<img class="image-main-slider-product" src="img/slider/selfie-stick.png" width="560" height="560" alt="Чёрная палка для селфи со штативом" />
-						<button class="main-slider-arrow left" aria-label="Назад"></button>
-						<button class="main-slider-arrow right" aria-label="Вперед"></button>
+						<button onclick="currentSlide(2)" class="main-slider-arrow left" aria-label="Назад"></button>
+						<button onclick="currentSlide(1)" class="main-slider-arrow right" aria-label="Вперед"></button>
 					</div>
 
 					<div class="content-main-slider-box">
