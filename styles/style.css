@@ -50,9 +50,15 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
   }*/
 
 
-html {
-  height: 100%;
-}
+  html {
+    height: 100%;
+  }
+
+  /* Хэдэр */
+
+  .page-header {
+    flex-grow: 1;
+  }
 
 
   .container {
@@ -244,10 +250,10 @@ html {
   .main-slider-item {
     display: flex;
     flex-wrap: nowrap;
-  }
+   }
 
 
-  .products-list {
+   .products-list {
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-between;
@@ -439,7 +445,7 @@ html {
     background-color: #f0f0f0;
     z-index: -1;
     top: 40px;
-}
+  }
 
   .tabs {
     position: relative;
@@ -468,7 +474,7 @@ html {
     background: url(../img/advantages/delivery.svg);
     display: block;
     position: absolute;
-}
+  }
 
   .advantages-content-box-right.garanty-icon:before {
     content: '';
@@ -477,7 +483,7 @@ html {
     background: url(../img/advantages/garanty.svg);
     display: block;
     position: absolute;
-}
+  }
 
   .advantages-content-box-right.credit-icon:before {
     content: '';
@@ -486,7 +492,7 @@ html {
     background: url(../img/advantages/credit.svg);
     display: block;
     position: absolute;
-}
+  }
 
   #tab1:checked ~ #content1, #tab2:checked ~ #content2, #tab3:checked ~ #content3 { 
     visibility: inherit; 
@@ -539,7 +545,17 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
   }
+
+  .car-icon-wrapper:before {
+    content: '';
+    width: 47px;
+    height: 31px;
+    position: absolute;
+    background-size: cover;
+    background-image: url(../img/misc/delivery-car.svg);
+}
 
   .infobox-title {
     font-family: 'Raleway', 'Arial', sans-serif;
@@ -754,7 +770,18 @@ html {
     line-height: 20px;
     color: #FFFFFF;
     font-style: normal;
+    position: relative;
   }
+
+  .footer-contacts-address:after {
+    content: '';
+    width: 80px;
+    display: block;
+    height: 7px;
+    border-bottom: 7px solid #FFC700;
+    position: absolute;
+    bottom: -64px;
+}
 
   .page-footer-wrapper {
     justify-content: space-between;
