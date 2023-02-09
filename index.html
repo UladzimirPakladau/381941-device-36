@@ -7,59 +7,61 @@
 </head>
 <body>
 
-	<header class="page-header container">	
-		<img class="logo" src="img/header/logo.svg" width="145" height="36" alt="Логотип интернет магазина «Девайс»">
+	<header class="page-header container">
+		<div class="page-header-wrapper">	
+			<img class="logo" src="img/header/logo.svg" width="145" height="36" alt="Логотип интернет магазина «Девайс»">
 
-		<!-- Начало верхней панели: поиск, кнопка входа и корзина -->
-		<div class="top-panel">
-			<div class="top-panel-search">
-				<form class="top-panel-form" action="https://echo.htmlacademy.ru/" method="POST">
-					<label class="top-panel-label">
-						<span class="visually-hidden">Поиск</span>
-						<input class="top-panel-input" type="search" placeholder="     Поиск по сайту">
-					</label>
-					<button class="top-panel-button" type="submit">Найти</button>
-				</form>
+			<!-- Начало верхней панели: поиск, кнопка входа и корзина -->
+			<div class="top-panel">
+				<div class="top-panel-search">
+					<form class="top-panel-form" action="https://echo.htmlacademy.ru/" method="POST">
+						<label class="top-panel-label">
+							<span class="visually-hidden">Поиск</span>
+							<input class="top-panel-input" type="search" placeholder="     Поиск по сайту">
+						</label>
+						<button class="top-panel-button" type="submit">Найти</button>
+					</form>
+				</div>
+
+				<div class="user-navigation">
+					<a class="user-navigation-link" href="#">Войти</a>
+					<a class="user-navigation-exit-link visually-hidden" href="#">Выйти</a>
+					<a class="user-navigation-link visually-hidden" href="#">Коля Петухов</a>
+				</div>
+
+				<div class="compare-btn-box">
+					<a class="compare-link" href="#">Сравнить</a>
+				</div>
+
+				<div class="cart-btn-box">
+					<a class="cart-link" href="#"><span class="added-item-amount">2</span>Корзина</a>
+				</div>
+
 			</div>
+			<!-- Конец верхней панели -->
 
-			<div class="user-navigation">
-				<a class="user-navigation-link" href="#">Войти</a>
-				<a class="user-navigation-exit-link visually-hidden" href="#">Выйти</a>
-				<a class="user-navigation-link visually-hidden" href="#">Коля Петухов</a>
-			</div>
-
-			<div class="compare-btn-box">
-				<a class="compare-link" href="#">Сравнить</a>
-			</div>
-
-			<div class="cart-btn-box">
-				<a class="cart-link" href="#"><span class="added-item-amount">2</span>Корзина</a>
-			</div>
-
+			<nav class="navigation">
+				<ul class="navigation-list">
+					<li class="navigation-item catalog-navigation">
+						<a class="navigation-link" href="catalog.html" >Каталог товаров</a>
+						<ul class="sub-list visually-hidden">
+							<li class="sub-list-item">Товар 1</li>
+							<li class="sub-list-item">Товар 2</li>
+							<li class="sub-list-item">Товар 3</li>
+						</ul>
+					</li>
+					<li class="navigation-item">
+						<a class="navigation-link" href="#">Доставка</a>
+					</li>
+					<li class="navigation-item">
+						<a class="navigation-link" href="#">Гарантия</a>
+					</li>
+					<li class="navigation-item">
+						<a class="navigation-link" href="#">Контакты</a>
+					</li>
+				</ul>
+			</nav>
 		</div>
-		<!-- Конец верхней панели -->
-
-		<nav class="navigation">
-			<ul class="navigation-list">
-				<li class="navigation-item catalog-navigation">
-					<a class="navigation-link" href="catalog.html" >Каталог товаров</a>
-					<ul class="sub-list visually-hidden">
-						<li class="sub-list-item">Товар 1</li>
-						<li class="sub-list-item">Товар 2</li>
-						<li class="sub-list-item">Товар 3</li>
-					</ul>
-				</li>
-				<li class="navigation-item">
-					<a class="navigation-link" href="#">Доставка</a>
-				</li>
-				<li class="navigation-item">
-					<a class="navigation-link" href="#">Гарантия</a>
-				</li>
-				<li class="navigation-item">
-					<a class="navigation-link" href="#">Контакты</a>
-				</li>
-			</ul>
-		</nav>
 	</header>
 	
 	
@@ -218,8 +220,8 @@
 		<!-- Конец блока популярных товаров -->
 
 		<!-- Начало блока преимуществ -->
-		<section class="advantages container">
-			<div class="advantages-container">
+		<section class="advantages">
+			<div class="advantages-container container">
 				<div class="tabs">
 						<input id="tab1" type="radio" name="tabs" checked> 
 						<label class="advantages-button button" for="tab1">Доставка</label>
@@ -232,8 +234,7 @@
 								<h3 class="advantages-content-box-title">Доставка</h3>
 								<p class="advantages-content-box-description">Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
 							</div>
-							<div class="advantages-content-box-right">
-								<img src="img/advantages/delivery.svg" width="118.46" height="121.12" alt="Иконка доставщика" />
+							<div class="advantages-content-box-right delivery-icon">								
 							</div>
 						</div>
 
@@ -242,8 +243,7 @@
 								<h3 class="advantages-content-box-title">Гарантия</h3>				
 								<p class="advantages-content-box-description">Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый. Товар, не дом, конечно же.</p>
 							</div>
-							<div class="advantages-content-box-right">
-								<img src="img/advantages/garanty.svg" width="171" height="195" alt="Иконка гарантии" />
+							<div class="advantages-content-box-right garanty-icon">
 							</div>
 						</div>
 
@@ -252,8 +252,7 @@
 								<h3 class="advantages-content-box-title">Кредит</h3>
 								<p class="advantages-content-box-description">Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для банка, разумеется.</p>
 							</div>
-							<div class="advantages-content-box-right">
-								<img src="img/advantages/credit.svg" width="156" height="188" alt="Иконка кредита" />
+							<div class="advantages-content-box-right credit-icon">
 							</div>
 						</div>
 					
@@ -282,7 +281,7 @@
 			<div class="about-wrapper">
 				<h2 class="about-title">О нас</h2>
 				<p class="about-text">Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
-				<p>Мы можем доставить ваш товар в самые отдалённые уголки России транспортными компаниями:</p>
+				<p class="about-text">Мы можем доставить ваш товар в самые отдалённые уголки России транспортными компаниями:</p>
 				<ul class="about-list">
 					<li class="about-item">Меловые линии</li>
 					<li class="about-item">СДИК</li>

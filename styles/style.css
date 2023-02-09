@@ -38,6 +38,9 @@ body {
   line-height: 30px;
   color: #444444;
   margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
 }
 
 /*
@@ -45,6 +48,11 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
   max-width: 1160px;
   margin: 0 auto;
   }*/
+
+
+html {
+  height: 100%;
+}
 
 
   .container {
@@ -65,6 +73,10 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
     top: 28px;
   }
 
+  .page-header-wrapper {
+    padding: 0 60px;
+  }
+
   .top-panel {
     margin-top: 30px;
     margin-bottom: 30px;
@@ -80,7 +92,7 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
     line-height: 20px;
     position: relative;
     border: none;
-    padding: 0px 0px;
+    padding: 0 0;
     background: unset;
   }
 
@@ -94,7 +106,7 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
 
   .top-panel-label {
     border: 2px solid #000000;
-    border-radius: 50px 0px 0px 50px;
+    border-radius: 50px 0 0 50px;
     padding: 10px 10px;
     width: 359px;
 
@@ -103,7 +115,7 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
   .top-panel-button {
     background: transparent;
     border: 2px solid #000000;
-    border-radius: 0px 50px 50px 0px;
+    border-radius: 0 50px 50px 0;
     padding: 10px 10px;
     border-left: unset;
     font-size: 16px;
@@ -132,6 +144,25 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
     position: relative;
   }
 
+  .navigation-item:nth-child(1) {
+    flex-grow: 10;
+  }
+
+  .navigation-item:nth-child(2) {
+    flex-grow: 1;
+    text-align: right;
+  }
+
+  .navigation-item:nth-child(3) {
+    flex-grow: 1;
+    text-align: right;
+  }
+
+  .navigation-item:nth-child(4) {
+    flex-grow: 1;
+    text-align: right;
+  }
+
   .catalog-navigation .navigation-link:after {
     content: '';
     width: 50px;
@@ -152,7 +183,7 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-between;
-    padding-left: 0px;
+    padding-left: 0;
   }
 
   .user-navigation-link:before {
@@ -189,7 +220,7 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
   span.added-item-amount {
     background-color: white;
     position: absolute;
-    padding: 3px 1px 0px 1px;
+    padding: 3px 1px 0 1px;
     border-radius: 50px;
     width: 20px;
     height: 20px;
@@ -232,7 +263,7 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
     position: absolute;
     z-index: -1;
     margin-right: auto;
-    right: 0px;
+    right: 0;
     top: 40px;
   }
 
@@ -327,7 +358,7 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
     display: block;
     position: absolute;
     top: 166px;
-    left: 0px;
+    left: 0;
     z-index: 10;
   }
 
@@ -340,7 +371,7 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
     display: block;
     position: absolute;
     top: 166px;
-    right: 0px;
+    right: 0;
     z-index: 10;
   }
 
@@ -380,6 +411,10 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
 
   .advantages {
     margin-top: 70px;
+    position: relative;
+
+
+
   }
 
   .advantages-content-box-title {
@@ -387,7 +422,7 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
     font-size: 50px;
     line-height: 50px;
     color: #000000;
-    margin-top: 0px;
+    margin-top: 0;
   }
 
   .advantages-content-box-description {
@@ -395,6 +430,16 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
     font-size: 18px;
     line-height: 30px;
   }
+
+  .advantages:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 200px;
+    background-color: #f0f0f0;
+    z-index: -1;
+    top: 40px;
+}
 
   .tabs {
     position: relative;
@@ -408,7 +453,6 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
   .advantages-content-box { 
     visibility: hidden;
     padding: 15px; 
-    background: white; 
     position: absolute; 
     top: 0; 
     left: 350px;
@@ -416,6 +460,33 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
     justify-content: space-between;
     gap: 100px;  
   }
+
+  .advantages-content-box-right.delivery-icon:before {
+    content: '';
+    width: 136px;
+    height: 164px;
+    background: url(../img/advantages/delivery.svg);
+    display: block;
+    position: absolute;
+}
+
+  .advantages-content-box-right.garanty-icon:before {
+    content: '';
+    width: 171px;
+    height: 195px;
+    background: url(../img/advantages/garanty.svg);
+    display: block;
+    position: absolute;
+}
+
+  .advantages-content-box-right.credit-icon:before {
+    content: '';
+    width: 156px;
+    height: 188px;
+    background: url(../img/advantages/credit.svg);
+    display: block;
+    position: absolute;
+}
 
   #tab1:checked ~ #content1, #tab2:checked ~ #content2, #tab3:checked ~ #content3 { 
     visibility: inherit; 
@@ -527,13 +598,24 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
     width: 260px;
   }
 
-  .about p {
+  .about .about-text {
     font-family: 'Rubik', 'Arial', sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
     line-height: 30px;
     color: #444444;
+  }
+
+  .about .contacts-address-text {
+    font-family: 'Rubik', 'Arial', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 30px;
+    color: #444444;
+    margin-bottom: 0;
+    margin-top: 0;
   }
 
   .contacts-subtitle {
@@ -615,7 +697,7 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
     font-size: 50px;
     line-height: 50px;
     color: #000000;
-    margin-top: 0px;
+    margin-top: 0;
   }
 
   .subscribe-text {
@@ -625,7 +707,7 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
     font-size: 18px;
     line-height: 30px;
     color: #444444;
-    margin-top: 0px;
+    margin-top: 0;
   }
 
   .subscribe-form-box-wrapper {
@@ -649,6 +731,7 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
     border: 3px solid #C4C4C4;
     padding: 18px 39px;
     width: auto;
+    cursor: pointer;
   }
 
   .page-footer {
@@ -661,7 +744,7 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
     display: flex;
     justify-content: space-between;
     gap: 35px;
-    padding: 0px;
+    padding: 0;
   }
 
   .footer-contacts-address {
@@ -669,7 +752,8 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
     font-weight: 400;
     font-size: 16px;
     line-height: 20px;
-    color: #FFFFFF; 
+    color: #FFFFFF;
+    font-style: normal;
   }
 
   .page-footer-wrapper {
@@ -760,7 +844,6 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
     display: flex;
     gap: 40px;
   }
-
 
   .product-list {
     display: flex;
