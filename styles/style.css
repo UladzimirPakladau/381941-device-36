@@ -250,6 +250,15 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
   .main-slider-item {
     display: flex;
     flex-wrap: nowrap;
+    display: none;
+   }
+
+   .active {
+    display: flex;
+   }
+
+   button.main-slider-arrow, .main-slider-control-button {
+    cursor: pointer;
    }
 
 
