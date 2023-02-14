@@ -56,8 +56,8 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
 
   /* Хэдэр */
 
-  .page-header {
-    flex-grow: 1;
+  header.page-header.container {
+    margin-top: 20px;
   }
 
 
@@ -76,7 +76,7 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
     background: #FFE17F;
     position: absolute;
     z-index: -1;
-    top: 28px;
+    top: 40px;
   }
 
   .page-header-wrapper {
@@ -84,8 +84,7 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
   }
 
   .top-panel {
-    margin-top: 30px;
-    margin-bottom: 30px;
+    margin: 30px 0 30px 0;
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-between;
@@ -128,6 +127,15 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
     line-height: 20px;
     color: #000000;
     width: 160px;
+  }
+
+  .user-navigation {
+    flex-grow: 1;
+    margin-left: 26px;
+  }
+
+  .cart-btn-box {
+    margin-left: 36px;
   }
 
   .user-navigation-link, .user-navigation-exit-link, .compare-link, .cart-link {
@@ -249,6 +257,7 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
 
   .main-slider-item {
     display: flex;
+    gap: 40px;
     flex-wrap: nowrap;
     display: none;
    }
@@ -261,6 +270,9 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
     cursor: pointer;
    }
 
+   p.item-main-slider-description {
+    margin-bottom: 50px;
+  }
 
    .products-list {
     display: flex;
@@ -278,7 +290,7 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
     position: absolute;
     z-index: -1;
     margin-right: auto;
-    right: 0;
+    right: 35px;
     top: 40px;
   }
 
@@ -348,7 +360,7 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
     justify-content: center;
     gap: 32px;
     position: relative;
-    top: -60px;
+    top: -56px;
   }
 
   button.main-slider-control-button {
@@ -761,8 +773,8 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
 
   .page-footer {
     background: #444444;
-    padding-top: 50px;
-    padding-bottom: 70px;
+    padding-top: 62px;
+    padding-bottom: 61px;
   }
 
   .additional-menu-lists {
@@ -770,6 +782,7 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
     justify-content: space-between;
     gap: 35px;
     padding: 0;
+    margin: 0;
   }
 
   .footer-contacts-address {
@@ -780,6 +793,11 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
     color: #FFFFFF;
     font-style: normal;
     position: relative;
+    margin-top: 35px;
+  }
+
+  .footer-navigation {
+    margin-top: 71px;
   }
 
   .footer-contacts-address:after {
@@ -790,7 +808,11 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
     border-bottom: 7px solid #FFC700;
     position: absolute;
     bottom: -64px;
-}
+  }
+
+  .footer-copyright {
+    margin-top: 71px;
+  }
 
   .page-footer-wrapper {
     justify-content: space-between;
@@ -822,6 +844,8 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
     padding: 0;
     list-style: none;
     justify-content: center;
+    margin-top: 62px;
+    margin-bottom: 0;
   }
 
   .footer-social-link {
