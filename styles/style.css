@@ -86,7 +86,7 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
   .top-panel {
     margin: 30px 0 30px 0;
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
   }
@@ -131,7 +131,7 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
 
   .user-navigation {
     flex-grow: 1;
-    margin-left: 26px;
+    margin-left: 6px;
   }
 
   .cart-btn-box {
@@ -144,6 +144,7 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
     line-height: 30px;
     color: #000000;
     text-decoration: none;
+    padding: 20px;
   }
 
   .navigation-link {
@@ -156,6 +157,11 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
     text-transform: uppercase;
     color: #000000;
     position: relative;
+    padding: 20px;
+  }
+
+  .navigation-link:last-child {
+    padding-right: 0;
   }
 
   .navigation-item:nth-child(1) {
@@ -185,8 +191,8 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
     position: absolute;
     background-image: url(../img/header/plus-icon.svg);
     background-repeat: no-repeat;
-    top: -15px;
-    right: -60px;
+    top: 5px;
+    right: -45px;
   }
 
   .navigation-item, .products-item {
@@ -195,7 +201,7 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
 
   .navigation-list {
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     justify-content: space-between;
     padding-left: 0;
   }
@@ -220,6 +226,8 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
 
   .cart-link {
     position: relative;
+    padding-right: 0px;
+    margin-left: -40px;
   }
 
   .cart-link:before {
@@ -243,8 +251,8 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
     font-size: 13px;
     line-height: 17px;
     font-weight: 400;
-    top: 1px;
-    left: -18px;
+    top: 19px;
+    left: 2px;
   }
 
   .content-main-slider-box {
@@ -276,7 +284,7 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
 
    .products-list {
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     justify-content: space-between;
     padding: 0;
   }
@@ -332,6 +340,7 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
     position: absolute;
     z-index: -1;
     top: 6px;
+    left: 0;
   }
 
   .read-more {
@@ -642,6 +651,7 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
     font-size: 18px;
     line-height: 30px;
     color: #444444;
+    margin-bottom: 30px;
   }
 
   .about .contacts-address-text {
@@ -653,6 +663,18 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
     color: #444444;
     margin-bottom: 0;
     margin-top: 0;
+  }
+
+  li.about-item:before {
+    content: '';
+    width: 8px;
+    height: 8px;
+    display: block;
+    position: absolute;
+    background: #FFC700;
+    top: 5px;
+    left: 0;
+    border-radius: 50%;
   }
 
   .contacts-subtitle {
@@ -677,7 +699,6 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
   }
 
   .about-list {
-    padding-left: 15px;
     font-family: 'Rubik', 'Arial', sans-serif;
     font-style: normal;
     font-weight: 700;
@@ -685,10 +706,14 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
     line-height: 20px;
     letter-spacing: -0.02em;
     color: #000000;
+    list-style: none;
+    padding-left: 0;
   }
 
   li.about-item {
     padding-bottom: 10px;
+    position: relative;
+    padding-left: 32px;
   }
 
   .about-item::marker {
@@ -779,6 +804,7 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
 
   .additional-menu-lists {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     gap: 35px;
     padding: 0;
@@ -846,6 +872,7 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
     justify-content: center;
     margin-top: 62px;
     margin-bottom: 0;
+    flex-wrap: wrap;
   }
 
   .footer-social-link {
@@ -900,9 +927,19 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
     text-decoration: none;
   }
 
-  .catalog-wrapper {
+  .catalog-wrapper-inner {
     display: flex;
     gap: 40px;
+  }
+
+  .catalog-wrapper-outer {
+    background: #F0F0F0;
+  }
+
+  .catalog-content {
+    background: #FFFFFF;
+    display: flex;
+    flex-direction: column;
   }
 
   .product-list {
@@ -911,10 +948,49 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
     padding: 0;
     gap: 40px;
     list-style: none;
+    justify-content: center;
+    max-width: 840px;
+  }
+
+  .pagination-show-more, .pagination {
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+
+  button.pagination-show-more {
+    padding: 18px 39px;
+    border: 3px solid #E5E5E5;
+    background: no-repeat;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #000000;
+    font-family: 'Raleway';
+    font-weight: 800;
+    font-size: 16px;
+    line-height: 19px;
   }
 
   .catalog-page.page-header:after {
     height: 195px;
+  }
+
+  /* filter */
+
+  .catalog-filter-heading {
+    font-family: 'Raleway';
+    font-weight: 800;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #000000;
+    margin-top: 0;
+    margin-bottom: 0;
+  } 
+
+  .filter-button {
+    background: inherit;
+    border: none;
   }
 
   .catalog-filter-title {
@@ -924,6 +1000,49 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
     line-height: 20px;
     letter-spacing: -0.02em;
     color: #000000;
+  }
+
+  select.select-control {
+    border: none;
+    background: none;
+  }
+
+  .catalog-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #F0F0F0;
+  }
+
+  .button-top, .button-bottom {
+    position: relative;
+    width: 11px;
+    height: 10px;
+  }
+
+  .button-top-wrapper {
+    display: flex;
+  }
+
+  .button-sort {
+    padding: 10px;
+  }
+
+  .button-top:before {
+    content: "";
+    width: 11px;
+    height: 10px;
+    background-image: url(../img/misc/up.svg);
+    position: absolute;
+
+  }
+
+  .button-bottom:before {
+    content: "";
+    width: 11px;
+    height: 10px;
+    background-image: url(../img/misc/down.svg);
+    position: absolute;
   }
 
   .product-card-title {
@@ -954,6 +1073,15 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
     color: #444444;
     opacity: 0.6;
     text-decoration: none;
+    padding: 10px;
+  }
+
+  .pagination-item:first-child a{
+    padding-left: 0px;
+  }
+
+  .pagination-item:last-child a{
+    padding-right: 0px;
   }
 
   .pagination-prev, .pagination-next {
