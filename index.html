@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<title>HTML Academy: Девайс</title>
 	<link rel="stylesheet" href="styles/style.css">
-	<script type="text/javascript" src="js/slider.js"></script>
+	<script type="text/javascript" src="js/slider.js"></script>	
 </head>
 <body>
 
@@ -338,9 +338,13 @@
 
 	<!-- Начало поап доставки -->
 
-	<article class="delivery-popup">
+	<article class="delivery-popup popup-switcher">
 		<form class="delivery-popup-form" action="https://echo.htmlacademy.ru/" method="post" target="_blank">
-			<h2 class="delivery-popup-title">Доставка под заказ</h2>
+
+			<div class="delivery-popup-header">
+				<h2 class="delivery-popup-title">Доставка под заказ</h2>
+				<a href="#" class="close-popup open-popup">Закрыть</a>
+			</div>	
 			<fieldset class="delivery-popup-fieldset">
 				<legend class="delivery-popup-legend visually-hidden">Подробности доставки</legend>    
 				<div class="delivery-popup-name delivery-popup-item">
@@ -422,6 +426,6 @@
 			</div>
 		</div>
 	</footer>
-	
+<script type="text/javascript" src="js/popup.js"></script>	
 </body>
 </html>

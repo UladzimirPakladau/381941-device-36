@@ -28,15 +28,4 @@ function showSlides(n) {
 }
 
 
-let popupbutton = document.getElementsByClassName("open-popup"); 
 
-popupbutton.onclick = function() {
-
-    let popupbox = document.getElementsByClassName("delivery-popup");
-    if (popupbox.style.display !== 'none') {
-        popupbox.style.display = 'none';
-    }
-    else {
-        popupbox.style.display = 'block';
-    }
-};
