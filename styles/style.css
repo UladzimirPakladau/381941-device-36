@@ -1104,7 +1104,6 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
 
   .delivery-popup-form {
     max-width: fit-content;
-    margin: 0 auto;
     background: #FFFFFF;
     border: 10px solid #000000;
     box-shadow: 0px 10px 0px rgba(0, 0, 0, 0.1);
@@ -1143,11 +1142,13 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
     grid-column: span 1;
     background: inherit;
     border: none;
+    z-index: 5;
   }
 
   .delivery-popup-item {
     display: flex;
     flex-direction: column;
+    gap: 14px;
   }
 
   .delivery-popup-title {
@@ -1170,6 +1171,7 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
   .delivery-popup-number-wrapper {
     display: flex;
     align-items: center;
+    background: #F0F0F0;
   }
 
   .delivery-popup-label {
@@ -1213,6 +1215,20 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
     display: flex;
     align-items: baseline;
     justify-content: space-between;
+  }
+
+  .number-minus, .number-plus {
+    text-decoration: none;
+  }
+
+  .delivery-popup-number-text, .number-minus, .number-plus {
+    text-align: center;
+    width: 33%;
+  }
+
+  .delivery-popup-button:after {
+    z-index: -1;
+    top: 16px;
   }
 
 
