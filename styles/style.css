@@ -57,9 +57,12 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
   /* Хэдэр */
 
   header.page-header.container {
-    margin-top: 20px;
+    padding-top: 20px;
   }
 
+  .logo {
+    margin-bottom: 30px;
+  }
 
   .container {
     width: 100%;
@@ -84,11 +87,12 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
   }
 
   .top-panel {
-    margin: 30px 0 30px 0;
+    margin: 0 0 30px 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
+    max-height: 40px;
   }
 
   .top-panel-input {
@@ -112,7 +116,7 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
   .top-panel-label {
     border: 2px solid #000000;
     border-radius: 50px 0 0 50px;
-    padding: 10px 10px;
+    padding: 0 10px;
     width: 359px;
 
   }
@@ -121,12 +125,17 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
     background: transparent;
     border: 2px solid #000000;
     border-radius: 0 50px 50px 0;
-    padding: 10px 10px;
+    padding: 0 10px;
     border-left: unset;
     font-size: 16px;
     line-height: 20px;
     color: #000000;
     width: 160px;
+  }
+
+  .user-cart-box {
+      display: flex;
+      flex-wrap: wrap;
   }
 
   .user-navigation {
@@ -147,6 +156,13 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
     padding: 20px;
   }
 
+  .navigation {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+
   .navigation-link {
     text-decoration: none;
     font-family: 'Raleway', 'Arial', sans-serif;
@@ -158,14 +174,16 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
     color: #000000;
     position: relative;
     padding: 20px;
+    padding-left: 0;
   }
 
   .navigation-link:last-child {
     padding-right: 0;
   }
 
+/*
   .navigation-item:nth-child(1) {
-    flex-grow: 10;
+    flex-grow: 1;
   }
 
   .navigation-item:nth-child(2) {
@@ -182,6 +200,46 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
     flex-grow: 1;
     text-align: right;
   }
+  */
+
+  .navigation-catalog-box {
+    padding: 0;
+    margin: 0;
+  }
+
+  .sub-list {
+    padding: 0;
+    list-style: none;    
+    grid-template-columns: 222px 211px 211px;
+    grid-template-rows: 18px 18px 18px;
+    gap: 18px 0;
+    display: none;
+  }
+
+  .sub-list-toogle {
+    display: grid;
+    position: absolute;
+    padding-top: 15px;
+  }
+
+  .sub-list-toogle:before {
+    content: '';
+    width: 1160px;
+    height: 146px;
+    background: #FFE17F;
+    position: absolute;
+    top: 3px;
+    left: -60px;
+    z-index: 20;
+    transition: 1s;
+  }
+
+  .sub-list-toogle a {
+    position: relative;
+    z-index: 25;
+    text-decoration: none;
+    color: #000000;
+  }
 
   .catalog-navigation .navigation-link:after {
     content: '';
@@ -193,6 +251,7 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
     background-repeat: no-repeat;
     top: 5px;
     right: -45px;
+    z-index: 26;
   }
 
   .navigation-item, .products-item {
@@ -204,6 +263,8 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
     flex-wrap: wrap;
     justify-content: space-between;
     padding-left: 0;
+    min-width: 471px;
+    gap: 15px 45px;
   }
 
   .user-navigation-link:before {
@@ -227,7 +288,6 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
   .cart-link {
     position: relative;
     padding-right: 0px;
-    margin-left: -40px;
   }
 
   .cart-link:before {
@@ -279,6 +339,7 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
    }
 
    p.item-main-slider-description {
+    margin: 0;
     margin-bottom: 50px;
   }
 
@@ -307,8 +368,9 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
     font-size: 50px;
     line-height: 50px;
     color: #000000;
-    margin-top: 80px;
+    margin-top: 0;
     margin-bottom: 30px;
+    padding-top: 80px;
   }
 
   .image-main-slider-product {
@@ -345,6 +407,7 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
 
   .read-more {
     margin-bottom: 65px;
+    max-width: 220px;
   }
 
   .details-data {

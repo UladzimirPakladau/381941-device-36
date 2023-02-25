@@ -9,3 +9,14 @@ popupButton.onclick = function() {
 closeButton.onclick = function() {
   popup.classList.toggle('popup-switcher');
 };
+
+
+
+let catalogopen = document.querySelector('.catalog-navigation .navigation-link');
+let sublist = document.querySelector('.sub-list');
+
+catalogopen.onclick = function() {
+  sublist.classList.toggle('sub-list-toogle');
+};
+
+
