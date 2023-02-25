@@ -1270,6 +1270,10 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
     height: 100vh;
   }
 
+  .span-two {
+    grid-column: span 2;
+  }
+
   .popup-switcher {
     display: none;
   }
