@@ -1265,7 +1265,7 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
   .delivery-popup{
     position: absolute;
     width: 100%;
-    z-index: 10;
+    z-index: 40;
     background: #ffffffe0;
     height: 100vh;
   }
