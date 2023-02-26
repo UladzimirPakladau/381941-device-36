@@ -1179,6 +1179,7 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
     line-height: 20px;
     letter-spacing: -0.02em;
     color: #000000;
+    max-width: 226px;
   }
 
   .product-card-link {
@@ -1196,6 +1197,13 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
   b.product-card-price {
     color: #000000;
     font-weight: 400;
+  }
+
+  .title-price-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
   }
 
   .pagination-link {
