@@ -87,12 +87,10 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
   }
 
   .top-panel {
-    margin: 0 0 30px 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    max-height: 40px;
   }
 
   .top-panel-input {
@@ -344,10 +342,19 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
   }
 
    .products-list {
+    margin: 0;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
     padding: 0;
+    margin-bottom: 40px;
+  }
+
+  .products-item:not(:nth-child(6n)) {
+    margin-right: 40px;
+  }
+
+  .products-item {
+    margin-bottom: 30px;
   }
 
   .main-slider-number {
@@ -386,11 +393,9 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
     text-align: center;
     letter-spacing: 0.2em;
     text-transform: uppercase;
-
     text-decoration: none;
     color: #000000;
     display: block;
-    width: 220px;
     position: relative;
   }
 
@@ -406,7 +411,7 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
   }
 
   .read-more {
-    margin-bottom: 65px;
+    margin-bottom: 50px;
     max-width: 220px;
   }
 
@@ -509,11 +514,8 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
 
 
   .advantages {
-    margin-top: 70px;
     position: relative;
-
-
-
+    margin-bottom: 70px;
   }
 
   .advantages-content-box-title {
@@ -526,6 +528,7 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
 
   .advantages-content-box-description {
     font-weight: 400;
+    margin: 0;
     font-size: 18px;
     line-height: 30px;
   }
@@ -542,7 +545,10 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
 
   .tabs {
     position: relative;
-    height: 230px; 
+    display: grid;
+    gap: 35px;
+    grid-template-rows: repeat(3, 40px);
+    grid-template-columns: 280px 350px 280px;
   }
 
   .tabs input { 
@@ -552,12 +558,11 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
   .advantages-content-box { 
     visibility: hidden;
     padding: 15px; 
-    position: absolute; 
-    top: 0; 
-    left: 350px;
-    display: flex;
+    display: none;
     justify-content: space-between;
-    gap: 100px;  
+    gap: 100px;
+    grid-column: 2 /4;
+    grid-row: 1 / 5;  
   }
 
   .advantages-content-box-right.delivery-icon:before {
@@ -588,7 +593,8 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
   }
 
   #tab1:checked ~ #content1, #tab2:checked ~ #content2, #tab3:checked ~ #content3 { 
-    visibility: inherit; 
+    visibility: inherit;
+    display: flex; 
   }
 
   .tabs input:checked + label { 
@@ -597,6 +603,17 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
     height: 30px;
     display: block;
     padding-top: 10px;
+    position: relative;
+  }
+
+  .tabs input:checked + label:after { 
+    content: '';
+    background: #000000;
+    height: 40px;
+    width: 275px;
+    display: block;
+    border-bottom: inherit;
+    top: 0;
   }
 
   .tabs:before {
@@ -611,24 +628,20 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
 
   .advantages-button { 
     display: block;
-    width: 280px;
     cursor: pointer;
     font-family: 'Raleway', 'Arial', sans-serif;
-    margin-bottom: 30px; 
-  }
-
-  .advantages-content-box-left {
-    max-width: 452px;
+    grid-column: 1;
+    max-width: 160px;
   }
 
   .infobox {
     display: flex;
     justify-content: space-between;
-    margin-top: 70px;
     margin-bottom: 70px;
     background: #F0F0F0;
     height: 100px;
     align-items: center;
+    gap: 30px;
   }
 
   .car-icon-wrapper {
@@ -658,6 +671,7 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
     letter-spacing: 0.2em;
     text-transform: uppercase;
     color: #000000;
+    text-align: center;
   }
 
   .info-icon {
@@ -714,6 +728,7 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
     font-size: 18px;
     line-height: 30px;
     color: #444444;
+    margin: 0;
     margin-bottom: 30px;
   }
 
@@ -869,7 +884,7 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    gap: 35px;
+    gap: 10px 35px;
     padding: 0;
     margin: 0;
   }
@@ -887,16 +902,17 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
 
   .footer-navigation {
     margin-top: 71px;
+    max-width: 460px;
   }
 
-  .footer-contacts-address:after {
+  .footer-contacts:after {
     content: '';
     width: 80px;
     display: block;
     height: 7px;
     border-bottom: 7px solid #FFC700;
     position: absolute;
-    bottom: -64px;
+    bottom: 0;
   }
 
   .footer-copyright {
@@ -963,6 +979,7 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
 
   .footer-contacts {
     max-width: 239px;
+    position: relative;
   }
 
   .inner-header-title {
