@@ -989,6 +989,7 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
     line-height: 50px;
     color: #000000;
     margin-bottom: 16px;
+    margin: 0;
   }
 
   .breadcrumbs {
@@ -1007,9 +1008,21 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
     text-decoration: none;
   }
 
+
+  /* Каталог */
+
+  .catalog-products {
+    padding: 0 40px;
+  }
+
   .catalog-wrapper-inner {
     display: flex;
     gap: 40px;
+    padding-top: 20px;
+  }
+
+  .catalog-filter {
+    padding-top: 60px;
   }
 
   .catalog-wrapper-outer {
@@ -1020,16 +1033,17 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
     background: #FFFFFF;
     display: flex;
     flex-direction: column;
+    margin-bottom: 78px;
   }
 
   .product-list {
     display: flex;
     flex-wrap: wrap;
     padding: 0;
-    gap: 40px;
     list-style: none;
-    justify-content: center;
     max-width: 840px;
+    padding-top: 70px;
+    margin: 0;
   }
 
   .pagination-show-more, .pagination {
@@ -1050,11 +1064,30 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
     line-height: 19px;
   }
 
+  .catalog-page {
+    margin-bottom: 35px;
+  }
+
   .catalog-page.page-header:after {
     height: 195px;
   }
 
   /* filter */
+
+  .catalog-filter-group {
+    border: none;
+  }
+
+  .catalog-wrapper-outer:before {
+    position: absolute;
+    content: '';
+    display: block;
+    width: 100vw;
+    height: 100vw;
+    background: #f0f0f0;
+    left: 0;
+    z-index: -1;
+  }
 
   .catalog-filter-heading {
     font-family: 'Raleway';
@@ -1090,7 +1123,7 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
   .catalog-header {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     background: #F0F0F0;
   }
 
@@ -1125,6 +1158,20 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
     position: absolute;
   }
 
+  .product-card:not(:nth-child(2n)) {
+    margin-right: 40px;
+    margin-left: 40px;
+  }
+
+  .product-card {
+    margin-bottom: 40px;
+  }
+
+  .catalog-filter-list {
+    padding: 0;
+    list-style: none;
+  }
+
   .product-card-title {
     font-family: 'Rubik', 'Arial', sans-serif;
     font-weight: 700;
@@ -1140,6 +1187,7 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
 
   .pagination {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     padding: 0;
     list-style: none;

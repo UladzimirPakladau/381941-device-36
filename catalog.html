@@ -2,16 +2,16 @@
 <html lang="ru">
 <head>
   <meta charset="utf-8">
-  <title>HTML Academy: Девайс</title>
+  <title>Каталог моноподов | HTML Academy: Девайс</title>
   <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
 
   <header class="page-header catalog-page container">
-    <div class="page-header-wrapper">
-    <a href="index.html">  
-      <img class="logo" src="img/header/logo.svg" width="145" height="36" alt="Логотип интернет магазина «Девайс»">
-    </a>  
+    <div class="page-header-wrapper"> 
+      <a href="index.html">
+        <img class="logo" src="img/header/logo.svg" width="145" height="36" alt="Логотип интернет магазина «Девайс»">
+      </a>
 
       <!-- Начало верхней панели: поиск, кнопка входа и корзина -->
       <div class="top-panel">
@@ -30,43 +30,48 @@
           <a class="user-navigation-exit-link visually-hidden" href="#">Выйти</a>
           <a class="user-navigation-link visually-hidden" href="#">Коля Петухов</a>
         </div>
-        <div class="compare-btn-box">
+
+        <div class="user-cart-box">
           <a class="compare-link" href="#">Сравнить</a>
-        </div>
-        <div class="cart-btn-box">
           <a class="cart-link" href="#"><span class="added-item-amount">2</span>Корзина</a>
         </div>
+
       </div>
       <!-- Конец верхней панели -->
 
       <nav class="navigation">
-        <ul class="navigation-list">
+        <ul class="navigation-catalog-box">
           <li class="navigation-item catalog-navigation">
-            <a class="navigation-link" href="catalog.html" >Каталог товаров</a>
-            <ul class="sub-list visually-hidden">
-              <li class="sub-list-item">Товар 1</li>
-              <li class="sub-list-item">Товар 2</li>
-              <li class="sub-list-item">Товар 3</li>
+            <a class="navigation-link" href="#" >Каталог товаров</a>
+            <ul class="sub-list">
+              <li class="sub-list-item"><a href="">Виртуальная реальность</a></li>
+              <li class="sub-list-item"><a href="">Фитнес-браслеты</a></li>
+              <li class="sub-list-item"><a href="">Квадрокоптеры</a></li>
+              <li class="sub-list-item"><a href="catalog.html">Моноподы для cелфи</a></li>
+              <li class="sub-list-item span-two"><a href="">Умные часы</a></li>
+              <li class="sub-list-item"><a href="">Экшн-камеры</a></li>
             </ul>
           </li>
+        </ul>
+        <ul class="navigation-list">
           <li class="navigation-item">
-            <a class="navigation-link" href="#">Доставка</a>
+            <a class="navigation-link open-popup" href="#">Доставка</a>
           </li>
           <li class="navigation-item">
             <a class="navigation-link" href="#">Гарантия</a>
           </li>
           <li class="navigation-item">
             <a class="navigation-link" href="#">Контакты</a>
-          </li>     
-        </ul> 
+          </li>
+        </ul>
       </nav>
     </div>
   </header>
 
-  <main class="main-index">
+  <main class="main-index container">
    <section class="catalog-products">
 
-    <div class="heading-wrapper container">
+    <div class="heading-wrapper">
       <h1 class="inner-header-title">Моноподы для селфи</h1>
       <ul class="breadcrumbs">
         <li class="breadcrumbs-item">
@@ -82,7 +87,7 @@
     </div>
 
     <div class="catalog-wrapper-outer">
-      <div class="catalog-wrapper-inner container">
+      <div class="catalog-wrapper-inner">
         <div class="filter-wrapper">
           <h3 class="catalog-filter-heading">Фильтр:</h3>
           <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
@@ -231,6 +236,45 @@
   </section>
 </main>
 
+
+  <!-- Начало поап доставки -->
+
+  <article class="delivery-popup popup-switcher">
+    <form class="delivery-popup-form" action="https://echo.htmlacademy.ru/" method="post" target="_blank">
+
+      <div class="delivery-popup-header">
+        <h2 class="delivery-popup-title">Доставка под заказ</h2>
+        <a href="#" class="close-popup open-popup">Закрыть</a>
+      </div>  
+      <fieldset class="delivery-popup-fieldset">
+        <legend class="delivery-popup-legend visually-hidden">Подробности доставки</legend>    
+        <div class="delivery-popup-name delivery-popup-item">
+          <label class="delivery-popup-label" for="name">Ваше имя:</label>
+          <input class="delivery-input" type="text" name="name" placeholder="Ваше имя" id="name" required>    
+        </div>
+        <div class="delivery-popup-email delivery-popup-item">
+          <label class="delivery-popup-label" for="e-mail">Ваш e-mail:</label>
+          <input class="delivery-input" type="e-mail" name="e-mail" placeholder="почта" id="e-mail">    
+        </div>    
+        <div class="delivery-popup-text delivery-popup-item">
+          <label class="delivery-popup-label" for="text">Что нужно привезти:</label>
+          <input class="delivery-input" type="text" name="text" placeholder="В свободной форме" id="text">
+        </div>    
+        <div class="delivery-popup-number delivery-popup-item">
+          <label class="delivery-popup-label" for="count">Количество:</label>
+            <div class="delivery-popup-number-wrapper">
+              <a href="#" class="number-minus">−</a>
+              <input class="delivery-popup-number-text delivery-input" type="text" name="count" value="1">    
+              <a href="#" class="number-plus">+</a>
+            </div>
+        </div>    
+        <button class="delivery-popup-button button" type="submit">Отправить</button>   
+      </fieldset>
+    </form>     
+  </article>
+
+  <!-- Конец поап доставки -->
+
 <footer class="page-footer">
   <div class="page-footer-wrapper container">
     <div class="footer-contacts">
@@ -282,5 +326,6 @@
     </div>
   </div>
 </footer>
+<script type="text/javascript" src="js/popup.js"></script>
 </body>
 </html>
