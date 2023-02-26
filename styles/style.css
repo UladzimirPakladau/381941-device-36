@@ -1193,6 +1193,11 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
     list-style: none;
   }
 
+  b.product-card-price {
+    color: #000000;
+    font-weight: 400;
+  }
+
   .pagination-link {
     font-weight: 400;
     font-size: 16px;
