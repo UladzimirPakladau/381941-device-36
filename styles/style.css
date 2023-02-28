@@ -992,11 +992,24 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
     margin: 0;
   }
 
+  /* Хлебные крошки */
+
+  .breadcrumbs-item:not(:last-child) .breadcrumbs-link:after {
+    content: '';
+    background-image: url(../img/misc/breadcrumb-arrow.svg);
+    width: 4px;
+    height: 7px;
+    display: inline-block;
+    background-size: contain;
+    margin-left: 20px;
+    background-repeat: no-repeat;
+  }
+
   .breadcrumbs {
     padding: 0;
     list-style: none;
     display: flex;
-    gap: 32px;
+    gap: 15px;
   }
 
   .breadcrumbs-link {
@@ -1006,6 +1019,7 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
     line-height: 20px;
     color: #000000;
     text-decoration: none;
+    position: relative;
   }
 
 
@@ -1023,6 +1037,7 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
 
   .catalog-filter {
     padding-top: 60px;
+    min-width: 200px;
   }
 
   .catalog-wrapper-outer {
@@ -1104,6 +1119,12 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
   .filter-button {
     background: inherit;
     border: none;
+    z-index: 4;
+  }
+
+  .filter-button:after {
+    z-index: -1;
+    top:8px;
   }
 
   .catalog-filter-title {
@@ -1376,4 +1397,85 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
     top: 16px;
   }
 
+  .filter-title-price {
+    margin-bottom: 30px;
+  }
+
+  .range {
+    margin-bottom: 55px;
+  }
+
+  .catalog-filter-title:before {
+    width: 168px;
+    content: '';
+    height: 2px;
+    background-color: black;
+    display: block;
+    position: absolute;
+    bottom: 27px;
+}
+
+.catalog-filter-title {
+  position: relative;
+}
+
+/* ползунок фильтра */
+
+  .catalog-filter-scale {
+    width: 100%;
+    height: 2px;
+    background-color: #DCDCDC;
+  }
+
+  .catalog-filter-bar {
+    width: 110px;
+    height: 2px;
+    background-color: #000000;
+  }
+
+  .catalog-filter-range-controls {
+    position: relative;
+  }
+
+  .range-toggle-min {
+    background: #EBEBEB;
+    border: 2px solid #000000;
+    width: 18px;
+    height: 18px;
+    border-radius: 50px;
+    position: absolute;
+    top: -10px;
+    left: -10px;
+  }
+
+  .range-toggle-max {
+    background: #EBEBEB;
+    border: 2px solid #000000;
+    width: 18px;
+    height: 18px;
+    border-radius: 50px;
+    position: absolute;
+    top: -10px;
+    right: 50px;
+  }
+
+  .range-toggle-min:after {
+    content: 'от 0';
+    position: absolute;
+    min-width: 70px;
+    top: 20px;
+    left: -7px;
+    opacity: 0.3;
+    font-size: 14px;
+  }
+
+    .range-toggle-max:after {
+    content: 'до 5000';
+    position: absolute;
+    min-width: 70px;
+    top: 20px;
+    left: -20px;
+    opacity: 0.3;
+    font-size: 14px;
+  }
 

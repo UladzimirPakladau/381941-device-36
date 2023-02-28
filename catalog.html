@@ -26,7 +26,7 @@
         </div>
 
         <div class="user-navigation">
-          <a class="user-navigation-link" href="#">Войти</a>
+          <a class="user-navigation-link" href="#">Коля Петухов</a>
           <a class="user-navigation-exit-link visually-hidden" href="#">Выйти</a>
           <a class="user-navigation-link visually-hidden" href="#">Коля Петухов</a>
         </div>
@@ -91,11 +91,15 @@
         <div class="filter-wrapper">
           <h3 class="catalog-filter-heading">Фильтр:</h3>
           <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
-            <fieldset class="catalog-filter-group">
-              <legend class="catalog-filter-title">Стоимость</legend>
-              <label class="catalog-filter-label">
-                <input class="price-filter-range" type="range" min="0" value="5000" max="10000" step="1" onchange="" />
-              </label>
+            <fieldset class="catalog-filter-group range">
+              <legend class="catalog-filter-title filter-title-price">Стоимость</legend>
+              <div class="catalog-filter-range-controls">
+                  <div class="catalog-filter-scale">
+                    <div class="catalog-filter-bar"></div>
+                  </div>
+                  <div class="range-toggle range-toggle-min"></div>
+                  <div class="range-toggle range-toggle-max"></div>
+              </div>
             </fieldset>
 
             <fieldset class="catalog-filter-group">
