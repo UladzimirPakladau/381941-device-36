@@ -1098,7 +1098,7 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
     content: '';
     display: block;
     width: 100vw;
-    height: 100vw;
+    height: 120%;
     background: #f0f0f0;
     left: 0;
     z-index: -1;
@@ -1120,6 +1120,7 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
     background: inherit;
     border: none;
     z-index: 4;
+    width: 100%;
   }
 
   .filter-button:after {
@@ -1498,8 +1499,6 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
     display: inline-block;
     width: 20px;
     height: 20px;
-    flex-shrink: 0;
-    flex-grow: 0;
     border: 2px solid #CCCCCC;
     border-radius: 3px;
     margin-right: 16px;
@@ -1508,3 +1507,38 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
     background-size: 50% 50%;
   }
 
+.control-input:checked + .control:before{
+    border: 2px solid #000000;
+    background-image: url(../img/misc/check-box-arrow.svg);
+}
+
+
+  .control-radio-input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+  }
+
+  .control-radio {
+    display: inline-flex;
+    align-items: center;
+    user-select: none;
+  }
+
+.control-radio:before {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #CCCCCC;
+    border-radius: 50px;
+    margin-right: 16px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 50% 50%;
+  }
+
+.control-radio-input:checked + .control-radio:before{
+    border: 2px solid #000000;
+    background-image: url(../img/misc/dot.svg);
+}
