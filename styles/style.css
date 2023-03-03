@@ -1029,10 +1029,6 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
 
   /* Каталог */
 
-  .catalog-products {
-    padding: 0 40px;
-  }
-
   .catalog-wrapper-inner {
     display: flex;
     gap: 40px;
@@ -1097,7 +1093,7 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
     border: none;
   }
 
-  .catalog-wrapper-outer:before {
+  /*.catalog-wrapper-outer:before {
     position: absolute;
     content: '';
     display: block;
@@ -1106,7 +1102,7 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
     background: #f0f0f0;
     left: 0;
     z-index: -1;
-  }
+  }*/
 
   .catalog-filter-heading {
     font-family: 'Raleway';
@@ -1279,6 +1275,19 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
     margin: 0 auto;
   }
 
+  .delivery-info {
+    width: 26px;
+    height: 26px;
+    background: #FFE17F;
+    border-radius: 50px;
+    display: inline-flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin-left: 6px;
+    cursor: pointer;
+  }
+
     .delivery-popup-fieldset {
     border: none;
     display: grid;
@@ -1349,6 +1358,26 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
     line-height: 20px;
     letter-spacing: -0.02em;
     color: #000000;
+    position: relative;
+  }
+
+.hover-info {
+    display: none;
+    position: absolute;
+    font-family: 'Rubik';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: #FFFFFF;
+    background: #000000;
+    box-shadow: 0px 10px 0px rgb(0 0 0 / 10%);
+    padding: 19px 17px;
+    max-width: 200px;
+    top: 35px;
+  }
+
+  .delivery-info:hover ~ .hover-info {
+    display: inherit;
   }
 
   .delivery-input::-webkit-input-placeholder {
@@ -1474,7 +1503,7 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
     font-size: 14px;
   }
 
-    .range-toggle-max:after {
+  .range-toggle-max:after {
     content: 'до 5000';
     position: absolute;
     min-width: 70px;
@@ -1655,5 +1684,18 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
     background-size: contain;
     top: -5px;
     left: 155px;
+    background-repeat: no-repeat;
+}
+
+.hover-info:before {
+    content: '';
+    width: 14px;
+    height: 6px;
+    background: url(../img/misc/treangle.svg);
+    display: block;
+    background-size: contain;
+    position: absolute;
+    top: -5px;
+    right: 37px;
     background-repeat: no-repeat;
 }
