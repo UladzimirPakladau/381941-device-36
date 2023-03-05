@@ -1384,6 +1384,8 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
     justify-content: center;
     margin-left: 6px;
     cursor: pointer;
+    position: absolute;
+    top: -3px;
   }
 
   .delivery-popup-fieldset {
@@ -1396,7 +1398,7 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
     padding: 0;
   }
 
-  .delivery-input:after {
+.user-mini-icon:after {
     content: '';
     width: 13px;
     height: 12px;
@@ -1404,7 +1406,21 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
     background-size: cover;
     display: block;
     background-image: url(../img/misc/user-mini.svg);
-  }
+    right: 20px;
+    top: 60px;
+}
+
+.user-email-icon:after {
+    content: '';
+    width: 13px;
+    height: 12px;
+    position: absolute;
+    background-size: cover;
+    display: block;
+    background-image: url(../img/misc/user-email.svg);
+    right: 20px;
+    top: 60px;
+}
 
   .delivery-popup-name {
     grid-column: span 2;
@@ -1434,6 +1450,7 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
     display: flex;
     flex-direction: column;
     gap: 14px;
+    position: relative;
   }
 
   .delivery-popup-title {
