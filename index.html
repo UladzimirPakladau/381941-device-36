@@ -40,8 +40,8 @@
 							<button class="user-cart-close" aria-label="Закрыть"></button>
 						</div>
 						<div class="user-cart-box-items">
-							<img class="user-cart-item" src="img/products/small-selfie-stick.jpg" alt="Любительская селфи-палка маленькая на белом фоне" width="39" height="43" />
-							<div class="user-cart-text">Любительская селфи-палка</div>
+							<img class="user-cart-item" src="img/products/small-pro-stick.jpg" alt="Любительская селфи-палка маленькая на белом фоне" width="39" height="43" />
+							<div class="user-cart-text">Профессиональная селфи-палка</div>
 							<button class="user-cart-close" aria-label="Закрыть"></button>
 						</div>
 						<div class="user-cart-box-summary">
@@ -364,7 +364,7 @@
 
 			<div class="delivery-popup-header">
 				<h2 class="delivery-popup-title">Доставка под заказ</h2>
-				<a href="#" class="close-popup open-popup">Закрыть</a>
+				<a href="#" class="close-popup open-popup close-icon-popup-delivery" aria-label="закрыть"></a>
 			</div>	
 			<fieldset class="delivery-popup-fieldset">
 				<legend class="delivery-popup-legend visually-hidden">Подробности доставки</legend>    
@@ -385,9 +385,13 @@
 						<div class="hover-info">Постараемся найти, сколько нужно. Привезём сколько получится по требованиям к провозу багажа.</div>
 					</div>
 						<div class="delivery-popup-number-wrapper">
-							<a href="#" class="number-minus">−</a>
-							<input class="delivery-popup-number-text delivery-input" type="text" name="count" value="1">		
-							<a href="#" class="number-plus">+</a>
+							<div class="number-minus-wrapper">
+								<a href="#" class="number-minus" aria-label="munis"></a>
+							</div>
+							<input class="delivery-popup-number-text delivery-input" type="text" name="count" value="1">
+							<div class="number-plus-wrapper">		
+								<a href="#" class="number-plus" aria-label="plus"></a>
+							</div>	
 						</div>
 				</div>	  
 				<button class="delivery-popup-button button" type="submit">Отправить</button>   

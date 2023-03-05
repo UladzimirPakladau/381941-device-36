@@ -30,6 +30,29 @@
   clip: rect(0 0 0 0);
 }
 
+a:hover {
+  opacity: 0.6;
+}
+
+a:focus {
+  opacity: 1;
+}
+
+a:active {
+  opacity: 0.3;
+}
+
+button:hover {
+  opacity: 0.6;
+}
+
+button:focus {
+  opacity: 1;
+}
+
+button:active {
+  opacity: 0.3;
+}
 
 body {
   font-family: 'Rubik', 'Arial', sans-serif;
@@ -55,6 +78,16 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
   }
 
   /* Хэдэр */
+
+  .logo:hover {
+    opacity: 0.6;
+  }
+  .logo:focus {
+    opacity: 1;
+  }
+  .logo:active {
+    opacity: 0.3;
+  }
 
   header.page-header.container {
     padding-top: 20px;
@@ -986,6 +1019,16 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
     position: relative;
   }
 
+  .footer-contacts-logo:hover {
+    opacity: 0.6;
+  }
+  .footer-contacts-logo:focus {
+    opacity: 1;
+  }
+  .footer-contacts-logo:active {
+    opacity: 0.3;
+  }
+
   .inner-header-title {
     font-family: 'Raleway', 'Arial', sans-serif;
     font-weight: 800;
@@ -1265,6 +1308,27 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
 
   /* css popup delivery */
 
+  .close-icon-popup-delivery {
+    width: 26px;
+    height: 26px;
+    background-image: url(../img/misc/close-popup-delivery.svg);
+    background-size: cover;
+  }
+
+  .number-minus {
+    width: 16px;
+    height: 16px;
+    background-image: url(../img/misc/minus.svg);
+    background-size: cover;
+  }
+
+  .number-plus {
+    width: 16px;
+    height: 16px;
+    background-image: url(../img/misc/plus.svg);
+    background-size: cover;
+  }
+
   .delivery-popup-form {
     max-width: fit-content;
     background: #FFFFFF;
@@ -1319,6 +1383,7 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
     background: inherit;
     border: none;
     z-index: 5;
+    min-width: 200px;
   }
 
   .delivery-popup-item {
@@ -1401,6 +1466,8 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
     z-index: 40;
     background: #ffffffe0;
     height: 100vh;
+    display: flex;
+    align-items: center;
   }
 
   .span-two {
@@ -1419,11 +1486,17 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
 
   .number-minus, .number-plus {
     text-decoration: none;
+    display: block;
   }
 
-  .delivery-popup-number-text, .number-minus, .number-plus {
+  .delivery-popup-number-text, .number-minus-wrapper, .number-plus-wrapper {
     text-align: center;
     width: 33%;
+  }
+
+  .number-minus-wrapper, .number-plus-wrapper {
+    display: flex;
+    justify-content: center;
   }
 
   .delivery-popup-button:after {
