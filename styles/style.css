@@ -725,6 +725,7 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
     display: block;
     padding-top: 10px;
     position: relative;
+    transition: 1s;
   }
 
 
@@ -769,6 +770,7 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
     max-width: 160px;
     align-items: center;
     justify-content: center;
+    transition: 1s;
   }
 
   .advantages-button:after {
@@ -1176,6 +1178,23 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
 
   /* Каталог */
 
+  .product-card-link:hover .product-card-link-more  {
+    display: block;
+    transition: 1s;
+    position: absolute;
+    min-width: 220px;
+    top: -195px;
+    left: 70px;
+  }
+
+  .product-card-link-more {
+    display: none;
+    margin: 0 auto;
+    padding: 0;
+    z-index: 1;
+    max-width: 220px;
+  }
+
   .catalog-wrapper-inner {
     display: flex;
     gap: 40px;
@@ -1317,7 +1336,19 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
     height: 10px;
     background-image: url(../img/misc/up.svg);
     position: absolute;
+  }
 
+  .new-product-card:before {
+    content: '';
+    width: 60px;
+    height: 60px;
+    display: block;
+    position: absolute;
+    background-size: contain;
+    background-image: url(../img/misc/new-product-label.svg);
+    z-index: 60;
+    right: 27px;
+    top: 27px;
   }
 
   .button-bottom:before {
@@ -1335,10 +1366,22 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
 
   .product-card {
     margin-bottom: 40px;
+    position: relative;
   }
 
   .product-card-image {
     object-fit: cover;
+    position: relative;
+  }
+
+  .product-card-image:before {
+    content: '';
+    width: 60px;
+    height: 60px;
+    display: block;
+    position: absolute;
+    background-size: contain;
+    background-image: url(../img/misc/new-product-label.svg);
   }
 
   .catalog-filter-list {
@@ -1358,6 +1401,7 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
 
   .product-card-link {
     text-decoration: none;
+    position: relative;
   }
 
   .pagination {
@@ -1479,7 +1523,7 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
     padding: 0;
   }
 
-.user-mini-icon:after {
+  .user-mini-icon:after {
     content: '';
     width: 13px;
     height: 12px;
@@ -1489,9 +1533,9 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
     background-image: url(../img/misc/user-mini.svg);
     right: 20px;
     top: 60px;
-}
+  }
 
-.user-email-icon:after {
+  .user-email-icon:after {
     content: '';
     width: 13px;
     height: 12px;
@@ -1501,7 +1545,7 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
     background-image: url(../img/misc/user-email.svg);
     right: 20px;
     top: 60px;
-}
+  }
 
   .delivery-popup-name {
     grid-column: span 2;
