@@ -36,6 +36,8 @@ a:hover {
 
 a:focus {
   opacity: 1;
+  box-sizing: border-box;
+  outline: #AF4FFF auto 1px;
 }
 
 a:active {
@@ -48,6 +50,8 @@ button:hover {
 
 button:focus {
   opacity: 1;
+  box-sizing: border-box;
+  outline: #AF4FFF auto 1px;
 }
 
 button:active {
@@ -460,6 +464,8 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
 
   .button:focus {
     opacity: 1;
+    box-sizing: border-box;
+    outline: #AF4FFF auto 1px;
   }
 
 
@@ -1524,8 +1530,8 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
     text-align: center;
   }
 
-  .delivery-popup{
-    position: absolute;
+  .delivery-popup {
+    position: fixed;
     width: 100%;
     z-index: 40;
     background: #ffffffe0;
@@ -1873,12 +1879,23 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
   opacity: 1;
 }
 
-.subscribe-form-button:focus {
+.subscribe-form-button:focus, .pagination-show-more:focus {
   opacity: 1;
+  outline-offset: 5px;
 }
 
 .subscribe-form-button:active {
   color: #FFFFFF;
   opacity: 0.3;
   background: #000000;
+}
+
+.control-radio:focus:before {
+  outline-offset: 5px;
+  outline: #AF4FFF auto 1px;
+}
+
+.control:focus:before {
+  outline-offset: 5px;
+  outline: #AF4FFF auto 1px;
 }
