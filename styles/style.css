@@ -1266,6 +1266,10 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
     margin-bottom: 40px;
   }
 
+  .product-card-image {
+    object-fit: cover;
+  }
+
   .catalog-filter-list {
     padding: 0;
     list-style: none;
@@ -1375,7 +1379,7 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
 
   .delivery-info {
     width: 26px;
-    height: 26px;
+    height: 24px;
     background: #FFE17F;
     border-radius: 50px;
     display: inline-flex;
@@ -1473,7 +1477,6 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
   .delivery-popup-number-wrapper {
     display: flex;
     align-items: center;
-    background: #F0F0F0;
   }
 
   .delivery-popup-label {
@@ -1558,6 +1561,23 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
   .number-minus-wrapper, .number-plus-wrapper {
     display: flex;
     justify-content: center;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    cursor: pointer;
+    background: #F0F0F0;
+  }
+
+  .number-minus-wrapper:hover, .number-plus-wrapper:hover {
+    opacity: 0.6;
+  }
+
+  .number-minus-wrapper:hover, .number-plus-wrapper:hover:focus {
+    opacity: 1;
+  }
+
+  .number-minus-wrapper:hover, .number-plus-wrapper:hover:active {
+    opacity: 0.3;
   }
 
   .delivery-popup-button:after {
@@ -1659,6 +1679,7 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
   display: inline-flex;
   align-items: center;
   user-select: none;
+  cursor: pointer;
 }
 
 .control:before {
@@ -1708,6 +1729,18 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
 .control-radio-input:checked + .control-radio:before{
   border: 2px solid #000000;
   background-image: url(../img/misc/dot.svg);
+}
+
+.control:hover {
+  opacity: 0.6;
+}
+
+.control:focus {
+  opacity: 1;
+}
+
+.control:active {
+  opacity: 0.3;
 }
 
 /* начало попап корзины */
