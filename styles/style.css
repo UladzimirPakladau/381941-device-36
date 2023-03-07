@@ -34,6 +34,16 @@ a:hover {
   opacity: 0.6;
 }
 
+a:active {
+  opacity: 0.3;
+}
+
+a:focus {
+  opacity: 1;
+  box-sizing: border-box;
+  outline: #AF4FFF auto 1px;
+}
+
 .error {
   outline: #FF3D3D auto 1px;
   box-sizing: border-box;
@@ -43,15 +53,6 @@ a:hover {
   opacity: 0.3;
 }
 
-a:focus {
-  opacity: 1;
-  box-sizing: border-box;
-  outline: #AF4FFF auto 1px;
-}
-
-a:active {
-  opacity: 0.3;
-}
 
 button:hover {
   opacity: 0.6;
@@ -61,16 +62,6 @@ button:focus {
   opacity: 1;
   box-sizing: border-box;
   outline: #AF4FFF auto 1px;
-}
-
-a:focus {
-  opacity: 1;
-  box-sizing: border-box;
-  outline: #AF4FFF auto 1px;
-}
-
-a:active {
-  opacity: 0.3;
 }
 
 button:active {
@@ -1017,6 +1008,8 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
     cursor: pointer;
   }
 
+  /* footer */
+
   .page-footer {
     background: #444444;
     padding-top: 62px;
@@ -1112,12 +1105,33 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
     background-image: url(../img/footer/telegram.svg);
   }
 
+  .footer-social-item .footer-social-link.telegram {
+    background-image: url(../img/footer/telegram.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 40%;
+  }
+
   .twitter {
     background-image: url(../img/footer/twitter.svg);
   }
 
+  .footer-social-item .footer-social-link.twitter {
+    background-image: url(../img/footer/twitter.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 40%;
+  }
+
   .youtube {
     background-image: url(../img/footer/telegram.svg);
+  }
+
+  .footer-social-item .footer-social-link.youtube {
+    background-image: url(../img/footer/youtube.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 40%;
   }
 
   .footer-contacts {
@@ -1135,6 +1149,45 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
     opacity: 0.3;
   }
 
+  .footer-phone:active {
+    opacity: 0.3;
+    color: #FFC700;
+  }
+
+  .footer-phone:hover {
+    color: #FFC700;
+  }
+
+  .footer-phone:focus {
+    opacity: 1;
+    box-sizing: border-box;
+    outline: #AF4FFF auto 1px;
+  }
+
+  .footer-social-link:active {
+    opacity: 1;
+    background: #FFC700;
+    background-blend-mode: difference;
+  }
+
+  .footer-social-link:hover {
+    background: #FFC700;
+    opacity: 1;
+  }
+
+  .footer-social-link:focus:before {
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    outline: #AF4FFF solid 1px;
+    outline-offset: 2px;
+  }
+
+  .footer-social-link:focus {
+    outline: inherit;
+  }
+
   .inner-header-title {
     font-family: 'Raleway', 'Arial', sans-serif;
     font-weight: 800;
@@ -1143,6 +1196,43 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
     color: #000000;
     margin-bottom: 16px;
     margin: 0;
+  }
+
+  .additional-menu-item-link:hover {
+    color: #FFC700;
+    border-bottom: 2px solid #FFC700;
+    opacity: 1;
+  }
+
+  .additional-menu-item-link:focus {
+    opacity: 1;
+    outline: #AF4FFF solid 1px;
+  }
+
+  .additional-menu-item-link:active {
+    color: #FFC700;
+    opacity: 0.3;
+  }
+
+  .footer-copyright-link:hover img {
+    filter: brightness(0) invert(1);
+  }
+
+  .footer-copyright-link:hover {
+    opacity: 1;
+  }
+
+  .footer-copyright-link:active img {
+    filter: brightness(0) invert(1);
+  }
+
+  .footer-copyright-link:active {
+    opacity: 0.3;
+  }
+
+  .footer-copyright-link:focus {
+    opacity: 1;
+    outline: #AF4FFF solid 1px;
   }
 
   /* Хлебные крошки */
@@ -2015,5 +2105,5 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
 
 .control:focus:before {
   outline-offset: 5px;
-  outline: #AF4FFF auto 1px;
+  outline: #AF4FFF solid 1px;
 }
