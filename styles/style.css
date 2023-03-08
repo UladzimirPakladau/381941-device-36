@@ -801,6 +801,20 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
     height: 100px;
     align-items: center;
     gap: 30px;
+    cursor: pointer;
+  }
+
+  .infobox:hover .car-icon-wrapper {
+    background: #FFC700;
+  }
+
+  .infobox:active {
+    opacity: 0.3;
+  }
+
+  .infobox:focus {
+    outline: #AF4FFF solid 1px;
+    outline-offset: 1px;
   }
 
   .car-icon-wrapper {
