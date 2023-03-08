@@ -41,7 +41,7 @@ a:active {
 a:focus {
   opacity: 1;
   box-sizing: border-box;
-  outline: #AF4FFF auto 1px;
+  outline: #AF4FFF solid 1px;
 }
 
 .error {
@@ -1981,8 +1981,45 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-between;
   margin-bottom: 20px;
+}
+
+.user-cart-box-items-link {
+    display: flex;
+    justify-content: space-between;
+    gap: 23px;
+    cursor: pointer;
+}
+
+.user-cart-box-items-link:hover {
+  opacity: 0.6;
+}
+
+.user-cart-box-items-link:active {
+  opacity: 0.3;
+}
+
+.user-cart-box-items-link:focus {
+  opacity: 1;
+  box-sizing: border-box;
+  outline: #AF4FFF solid 1px;
+  outline-offset: 1px;
+}
+
+.user-cart-close:hover {
+  opacity: 0.6;
+}
+
+.user-cart-close:active {
+  opacity: 0.3;
+}
+
+.user-cart-close:focus {
+  opacity: 1;
+  box-sizing: border-box;
+  outline: #AF4FFF solid 1px;
+  outline-offset: 1px;
 }
 
 .user-cart-box-summary {
@@ -2054,6 +2091,8 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
   height: 10px;
   background-repeat: no-repeat;
   background-size: contain;
+  background-size: contain;
+  background-position: center center;
 }
 
 .user-cart-box-popup:before {
