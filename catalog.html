@@ -14,7 +14,7 @@
       </a>
 
       <!-- Начало верхней панели: поиск, кнопка входа и корзина -->
-      <div class="top-panel">
+<div class="top-panel">
         <div class="top-panel-search">
           <form class="top-panel-form" action="https://echo.htmlacademy.ru/" method="POST">
             <label class="top-panel-label">
@@ -26,14 +26,38 @@
         </div>
 
         <div class="user-navigation">
+          <a class="user-navigation-link visually-hidden" href="#">Войти</a>
           <a class="user-navigation-link" href="#">Коля Петухов</a>
-          <a class="user-navigation-exit-link visually-hidden" href="#">Выйти</a>
-          <a class="user-navigation-link visually-hidden" href="#">Коля Петухов</a>
+          <a class="user-navigation-exit-link" href="#">Выйти</a>
+          
         </div>
 
         <div class="user-cart-box">
           <a class="compare-link" href="#">Сравнить</a>
-          <a class="cart-link" href="#"><span class="added-item-amount">2</span>Корзина</a>
+          <a class="cart-link" href="#"><button class="added-item-amount">2</button>Корзина</a>
+          <div class="user-cart-box-popup">
+            <div class="user-cart-box-items">
+              <a class="user-cart-box-items-link">
+                <img class="user-cart-item" src="img/products/small-selfie-stick.jpg" alt="Любительская селфи-палка маленькая на белом фоне" width="39" height="43" />
+                <div class="user-cart-text">Любительская селфи-палка</div>
+              </a>
+              <button class="user-cart-close" aria-label="Закрыть"></button>
+            </div>
+            <div class="user-cart-box-items">
+              <a class="user-cart-box-items-link">
+                <img class="user-cart-item" src="img/products/small-pro-stick.jpg" alt="Любительская селфи-палка маленькая на белом фоне" width="39" height="43" />
+                <div class="user-cart-text">Профессиональная селфи-палка</div>
+              </a>
+              <button class="user-cart-close" aria-label="Закрыть"></button>
+            </div>
+            <div class="user-cart-box-summary">
+              <div class="user-cart-box-summary-items">Товаров: 2</div>
+              <div class="user-cart-box-summary-price">Сумма: 2000 ₽</div>
+            </div>
+            <div class="to-cart-wrapper">
+              <a class="to-cart-link" href="#">Открыть корзину</a>
+            </div>  
+          </div>
         </div>
 
       </div>
@@ -68,10 +92,10 @@
     </div>
   </header>
 
-  <main class="main-index container">
+  <main class="main-index">
    <section class="catalog-products">
 
-    <div class="heading-wrapper">
+    <div class="heading-wrapper container">
       <h1 class="inner-header-title">Моноподы для селфи</h1>
       <ul class="breadcrumbs">
         <li class="breadcrumbs-item">
@@ -87,7 +111,7 @@
     </div>
 
     <div class="catalog-wrapper-outer">
-      <div class="catalog-wrapper-inner">
+      <div class="catalog-wrapper-inner container">
         <div class="filter-wrapper">
           <h3 class="catalog-filter-heading">Фильтр:</h3>
           <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
@@ -132,15 +156,16 @@
               <legend class="catalog-filter-title">Bluetooth</legend>
               <ul class="catalog-filter-list">
                 <li class="catalog-filter-item">
-                  <input class="control-radio-input" type="radio" id="yes" name="yes" value="yes">
+                  <input class="control-radio-input" type="radio" id="yes" name="Bluetooth" value="yes">
                   <label for="yes" class="control-radio">Есть</label>
                 </li>
                 <li class="catalog-filter-item">
-                  <input class="control-radio-input" type="radio" id="no" name="no" value="no">
+                  <input class="control-radio-input" type="radio" id="no" name="Bluetooth" value="no">
                   <label for="no" class="control-radio">Нет</label>                                      
                 </li>
               </ul>
             </fieldset>
+            
             <button class="filter-button button" type="submit">Показать</button>
           </form>
         </div>
@@ -166,6 +191,7 @@
           <ul class="product-list">
             <li class="product-card">
               <a class="product-card-link" href="#">
+                <span class="button product-card-link-more">Подробнее</span>                
                 <img class="product-card-image" src="img/products/selfie-stick-for-beginners.jpg" width="360" height="380" alt="Чёрно - серебряная выдвижная селфи палка">
                 <div class="title-price-wrapper">
                   <h3 class="product-card-title">Любительская<br> селфи-палка</h3>
@@ -174,8 +200,9 @@
               </a>
               
             </li>
-            <li class="product-card">
+            <li class="product-card new-product-card">
               <a class="product-card-link" href="#">
+                <span class="button product-card-link-more">Подробнее</span>                 
                 <img class="product-card-image" src="img/products/professional-selfie-stick.jpg" width="360" height="380" alt="Селфи палка для профессионалов чёрного цвета">
                 <div class="title-price-wrapper">
                   <h3 class="product-card-title">Профессиональная селфи-палка </h3>
@@ -185,6 +212,7 @@
             </li>
             <li class="product-card">
               <a class="product-card-link" href="#">
+                <span class="button product-card-link-more">Подробнее</span>                 
                 <img class="product-card-image" src="img/products/selfie-stick.jpg" width="360" height="380" alt="Непотопляемая селфи-палка чёрно - жёлтого цвета">
                 <div class="title-price-wrapper">
                   <h3 class="product-card-title">Непотопляемая<br> селфи-палка</h3>
@@ -194,6 +222,7 @@
             </li>
             <li class="product-card">
               <a class="product-card-link" href="#">
+                <span class="button product-card-link-more">Подробнее</span>                 
                 <img class="product-card-image" src="img/products/monopod.jpg" width="360" height="380" alt="Селфи-палка в виде человеческой руки">
                 <div class="title-price-wrapper">
                   <h3 class="product-card-title">Селфи-палка «Следуй<br> за мной»</h3>
@@ -242,28 +271,36 @@
 
       <div class="delivery-popup-header">
         <h2 class="delivery-popup-title">Доставка под заказ</h2>
-        <a href="#" class="close-popup open-popup">Закрыть</a>
+        <a href="#" class="close-popup open-popup close-icon-popup-delivery" aria-label="закрыть"></a>
       </div>  
       <fieldset class="delivery-popup-fieldset">
         <legend class="delivery-popup-legend visually-hidden">Подробности доставки</legend>    
         <div class="delivery-popup-name delivery-popup-item">
           <label class="delivery-popup-label" for="name">Ваше имя:</label>
-          <input class="delivery-input" type="text" name="name" placeholder="Ваше имя" id="name" required>    
+          <input class="delivery-input" type="text" name="name" placeholder="Ваше имя" id="name" required>
+          <span class="user-mini-icon"></span>    
         </div>
         <div class="delivery-popup-email delivery-popup-item">
           <label class="delivery-popup-label" for="e-mail">Ваш e-mail:</label>
-          <input class="delivery-input" type="e-mail" name="e-mail" placeholder="почта" id="e-mail">    
+          <input class="delivery-input" type="e-mail" name="e-mail" placeholder="почта" id="e-mail">
+          <span class="user-email-icon"></span>   
         </div>    
         <div class="delivery-popup-text delivery-popup-item">
           <label class="delivery-popup-label" for="text">Что нужно привезти:</label>
           <input class="delivery-input" type="text" name="text" placeholder="В свободной форме" id="text">
         </div>    
         <div class="delivery-popup-number delivery-popup-item">
-          <label class="delivery-popup-label" for="count">Количество:</label>
+          <div class="delivery-popup-label" for="count">Количество: <span class="delivery-info">i</span>
+            <div class="hover-info">Постараемся найти, сколько нужно. Привезём сколько получится по требованиям к провозу багажа.</div>
+          </div>
             <div class="delivery-popup-number-wrapper">
-              <a href="#" class="number-minus">−</a>
-              <input class="delivery-popup-number-text delivery-input" type="text" name="count" value="1">    
-              <a href="#" class="number-plus">+</a>
+              <div class="number-minus-wrapper">
+                <a href="#" class="number-minus" aria-label="munis"></a>
+              </div>
+              <input class="delivery-popup-number-text delivery-input" type="text" name="count" value="1">
+              <div class="number-plus-wrapper">   
+                <a href="#" class="number-plus" aria-label="plus"></a>
+              </div>  
             </div>
         </div>    
         <button class="delivery-popup-button button" type="submit">Отправить</button>   
@@ -316,7 +353,7 @@
     </div>
 
     <div class="footer-copyright">
-      <a class="footer-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
+      <a class="footer-phone" href="tel:+78128121212">Тел.: +7 (812) 812-12-12</a>
       <p class="footer-text">
         <a class="footer-copyright-link" href="https://htmlacademy.ru/"><img src="img/footer/html-academy-logo.svg" width="115" height="33" alt="html academy" />
         </a>

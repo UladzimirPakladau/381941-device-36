@@ -20,3 +20,11 @@ catalogopen.onclick = function() {
 };
 
 
+
+let cartopen = document.querySelector('.cart-link');
+let cartpopup = document.querySelector('.user-cart-box-popup');
+
+cartopen.onclick = function() {
+  cartpopup.classList.toggle('popupflex');
+};
+
