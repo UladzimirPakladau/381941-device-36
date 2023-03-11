@@ -184,33 +184,44 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
     margin-bottom: 11px;
   }
 
+  .top-panel-label {
+    position: relative;
+  }
+
   .top-panel-input {
     color: #000000;
     font-size: 16px;
     line-height: 20px;
     position: relative;
-    border: none;
-    padding: 0 0;
     background: unset;
-    width: 100%;
     height: 100%;
+    border: 2px solid #000000;
+    border-radius: 50px 0 0 50px;
+    padding: 9px 5px 9px 47px;
+    width: 359px;
   }
 
-  .top-panel-input::placeholder {
+  .top-panel-label:before {
     background-image: url(../img/header/search-icon.svg);
     background-size: contain;
     background-repeat: no-repeat;
-    font-size: 16px;
-    opacity: 0.3;
-    padding-left: 22px;
-    background-position: 12px 1px;
+    width: 16px;
+    height: 16px;
+    display: block;
+    position: absolute;
+    content: '';
+    top: 12px;
+    left: 16px;
   }
 
-  .top-panel-label {
-    border: 2px solid #000000;
-    border-radius: 50px 0 0 50px;
-    padding: 3px 0 0 1px;
-    width: 359px;
+  .top-panel-input::placeholder {
+    position: absolute;
+    left: 26px;
+    font-family: 'Rubik';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
   }
 
   .top-panel-button {
@@ -223,7 +234,22 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
     line-height: 20px;
     color: #000000;
     width: 160px;
+    cursor: pointer;
   }
+
+  .top-panel-button:hover {
+    color: #FFFFFF;
+    background: #000000;
+    opacity: 1;
+  }
+
+  .top-panel-input:focus:after {
+    position: absolute;
+    content: '';
+    box-sizing: border-box;
+    outline: #AF4FFF solid 1px;
+    outline-offset: 1px;
+  } 
 
   .user-cart-box {
     display: flex;
@@ -464,7 +490,7 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
 
   p.item-main-slider-description {
     margin: 0;
-    margin-bottom: 60px;
+    margin-bottom: 50px;
     font-weight: 400;
     font-size: 18px;
     line-height: 30px;
@@ -526,10 +552,13 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
     text-transform: uppercase;
     text-decoration: none;
     color: #000000;
-    display: block;
     position: relative;
     cursor: pointer;
     font-family: 'Raleway';
+    min-height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .button:after {
@@ -539,7 +568,7 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
     border-bottom: 8px solid #FFE17F;
     position: absolute;
     z-index: -1;
-    top: 6px;
+    top: 15px;
     left: 0;
   }
 
@@ -572,7 +601,7 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
 
 
   .read-more {
-    margin-bottom: 45px;
+    margin-bottom: 37px;
     max-width: 220px;
   }
 
@@ -780,13 +809,15 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
     color: #FFE17F;
     background: #000000;
     height: 30px;
-    display: block;
-    padding-top: 9px;
     padding-left: 2px;
     position: relative;
     transition: 1s;
+    display: flex;
   }
 
+  .tabs input {
+    transition: 1s;
+  }
 
   .tabs input:checked:hover + label .advantages-text {
     margin-left: 50px;
@@ -836,14 +867,14 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
     align-items: center;
     justify-content: center;
     transition: 1s;
-    padding-left: 2px: 
+    padding-left: 2px;
   }
 
   .advantages-button:after {
     top: 16px;
   }
 
-  .infobox {
+  .infobox-wrapper {
     display: flex;
     justify-content: space-between;
     margin-bottom: 118px;
@@ -920,7 +951,7 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
   .about {
     display: flex;
     gap: 113px;
-    margin-bottom: 79px;
+    margin-bottom: 68px;
   }
 
   .about-title {
@@ -1018,7 +1049,7 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
     list-style: none;
     padding: 0;
     margin: 0;
-    margin-bottom: 40px;
+    margin-bottom: 32px;
     font-family: 'Rubik';
     font-weight: 400;
     font-size: 18px;
@@ -1036,7 +1067,7 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
     list-style: none;
     padding-left: 0;
     margin: 0;
-    margin-bottom: 21px;
+    margin-bottom: 13px;
   }
 
   li.about-item {
@@ -2184,7 +2215,7 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
       flex-direction: column;
       flex-wrap: wrap;
       background: #000000;
-      z-index: 5;
+      z-index: 30;
       min-width: 320px;
       padding: 20px;
       box-sizing: border-box;
