@@ -172,7 +172,7 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
   }
 
   .compare-link {
-    margin-right: -7px;
+    margin-right: -5px;
   }
 
   .top-panel {
@@ -241,6 +241,10 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
     color: #FFFFFF;
     background: #000000;
     opacity: 1;
+  }
+
+  .top-panel-button:active {
+    color: #757575;
   }
 
   .top-panel-input:focus:after {
@@ -972,7 +976,7 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
     border-bottom: 7px solid #000000;
     position: absolute;
     z-index: -1;
-    top: -48px;
+    top: -47px;
   }
 
   .about-button.button {
@@ -1156,12 +1160,14 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
   .subscribe-form-box-label input {
     background: none;
     border: none;
-    padding: 23px 17px;
+    padding: 20px 17px;
     width: 523px;
   }
 
+
   .subscribe-form-box-label {
     border-bottom: 3px solid #C4C4C4;
+    overflow: hidden;
   }
 
   .subscribe-form-button {
@@ -1223,7 +1229,7 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
     display: block;
     border-bottom: 6px solid #FFC700;
     position: absolute;
-    bottom: 22px;
+    bottom: 21px;
     left: 1px;
   }
 
@@ -1489,7 +1495,7 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
     background: #FFFFFF;
     display: flex;
     flex-direction: column;
-    margin-bottom: 78px;
+    margin-bottom: 79px;
   }
 
   .product-list {
@@ -1598,7 +1604,7 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
 
     .filter-button:after {
       z-index: -1;
-      top:8px;
+      top: 15px;
     }
 
     .catalog-filter-title {
@@ -1619,7 +1625,8 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
       font-size: 18px;
       line-height: 30px;
       color: #000000;
-      margin-left: -57px;
+      margin-left: -49px;
+      width: 140px;
     }
 
     .catalog-filter fieldset {
@@ -1641,8 +1648,6 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
 
     .button-top, .button-bottom {
       position: relative;
-      width: 11px;
-      height: 10px;
     }
 
 
@@ -1654,7 +1659,10 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
     }
 
     .button-sort {
-      padding: 10px;
+      padding: 15px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
 
     .button-top:before {
@@ -1716,6 +1724,10 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
       padding: 0;
       list-style: none;
       margin-bottom: 35px;
+    }
+
+    .bluetooth-group .catalog-filter-list {
+       margin-bottom: 29px;
     }
 
     .product-card-title {
@@ -2384,12 +2396,11 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
       background-repeat: no-repeat;
     }
 
-    .subscribe-form-box-label input::-webkit-input-placeholder {
+    .subscribe-form-box-label input::-webkit-input-placeholder, .subscribe-form-box-label input:placeholder-shown {
       font-family: 'Rubik';
       font-style: normal;
       font-weight: 400;
       font-size: 18px;
-      line-height: 30px;
       color: #444444;
       opacity: 0.5;
     }
