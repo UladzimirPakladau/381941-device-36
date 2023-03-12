@@ -1888,6 +1888,14 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
       padding: 10px 15px;
     }
 
+    .pagination-link:hover {
+      background: #DCDCDC;
+    }
+
+    .pagination-link:active {
+      color: b9b9b9;
+    }
+
     .pagination-item:first-child a{
       padding-left: 0px;
     }
@@ -2385,6 +2393,7 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
       justify-content: space-between;
       gap: 23px;
       cursor: pointer;
+      text-decoration: none;
     }
 
     .user-cart-box-items-link:hover {
