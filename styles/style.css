@@ -59,13 +59,17 @@ button:hover {
   opacity: 0.6;
 }
 
+button:active {
+  opacity: 0.3;
+}
+
 button:focus {
   opacity: 1;
   box-sizing: border-box;
   outline: #AF4FFF auto 1px;
 }
 
-button:active {
+button:disabled {
   opacity: 0.3;
 }
 
@@ -78,6 +82,26 @@ select:focus {
   box-sizing: border-box;
   outline: #AF4FFF auto 1px;
 }
+
+input:hover {
+  opacity: 0.6;
+}
+
+input:active {
+  opacity: 0.3;
+}
+
+input:focus {
+  opacity: 1;
+  box-sizing: border-box;
+  outline: #AF4FFF auto 1px;
+}
+
+
+input:disabled {
+  opacity: 0.3;
+}
+input
 
 select:active {
   opacity: 0.3;
@@ -467,6 +491,7 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
     top: 25px;
     left: 4px;
     border-width: inherit;
+    border: inherit;
   }
 
   .content-main-slider-box {
@@ -1311,7 +1336,7 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
   }
 
   .youtube {
-    background-image: url(../img/footer/telegram.svg);
+    background-image: url(../img/footer/youtube.svg);
   }
 
   .footer-social-item .footer-social-link.youtube {
@@ -1599,7 +1624,7 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
       background: inherit;
       border: none;
       z-index: 4;
-      width: 100%;
+      width: 111%;
     }
 
     .filter-button:after {
@@ -1724,10 +1749,14 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
       padding: 0;
       list-style: none;
       margin-bottom: 35px;
+      max-width: 198px;
     }
 
     .bluetooth-group .catalog-filter-list {
-       margin-bottom: 29px;
+      margin-bottom: 25px;
+      flex-direction: column;
+      display: flex;
+      gap: 3px;
     }
 
     .product-card-title {
@@ -1750,9 +1779,19 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
-      padding: 25px 25px;
+      padding: 24px 11px 13px 15px;
       list-style: none;
       margin: 0 40px;
+      align-items: baseline;
+    }
+
+    .pagination-numbers {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding: 0;
+      list-style: none;
+      margin: 0;
     }
 
     b.product-card-price {
@@ -1781,7 +1820,7 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
       color: #444444;
       opacity: 0.6;
       text-decoration: none;
-      padding: 10px;
+      padding: 10px 15px;
     }
 
     .pagination-item:first-child a{
@@ -1801,6 +1840,7 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
       text-transform: uppercase;
       color: #444444;
       opacity: 0.3;
+      padding: 11px 10px;
     }
 
     .pagination-next {
@@ -1951,6 +1991,7 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
     .delivery-popup-number-wrapper {
       display: flex;
       align-items: center;
+      position: relative;
     }
 
     .delivery-popup-label {
@@ -2026,19 +2067,24 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
       display: block;
     }
 
-    .delivery-popup-number-text, .number-minus-wrapper, .number-plus-wrapper {
+    .delivery-popup-number-text {
       text-align: center;
-      width: 33%;
+      width: 100%;
     }
 
     .number-minus-wrapper, .number-plus-wrapper {
-      display: flex;
-      justify-content: center;
-      height: 100%;
-      width: 100%;
-      align-items: center;
       cursor: pointer;
-      background: #F0F0F0;
+      position: absolute;
+    }
+
+    .number-plus-wrapper {
+      right: 12px;
+      padding: 10px;
+    }
+
+    .number-minus-wrapper {
+      left: 12px;
+      padding: 10px;
     }
 
     .number-minus-wrapper:hover, .number-plus-wrapper:hover {
@@ -2161,7 +2207,7 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
       height: 20px;
       border: 2px solid #CCCCCC;
       border-radius: 3px;
-      margin-right: 16px;
+      margin-right: 14px;
       background-repeat: no-repeat;
       background-position: center center;
       background-size: 50% 50%;
@@ -2192,7 +2238,7 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
       height: 20px;
       border: 2px solid #CCCCCC;
       border-radius: 50px;
-      margin-right: 16px;
+      margin-right: 14px;
       background-repeat: no-repeat;
       background-position: center center;
       background-size: 50% 50%;
