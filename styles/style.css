@@ -1547,14 +1547,14 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
     background: #000000;
   }
 
-  .range-toggle:focus:after {
+  /*.range-toggle:focus:after {
     outline-offset: 1px;
     outline: #AF4FFF solid 1px;
     content: '';
     position: absolute;
     width: 24px;
     height: 24px;
-  } 
+  }*/ 
 
   .product-card-link-more {
     display: none;
@@ -2231,6 +2231,10 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
       position: relative;
     }
 
+    .range-toggle:focus {
+      outline: inherit;
+    }
+
     .range-toggle-min {
       background: #EBEBEB;
       border: 2px solid #000000;
@@ -2277,14 +2281,14 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
     }
 
     .range-toggle:focus:before {
-      outline-offset: 2px;
+      outline-offset: 1px;
       outline: #AF4FFF solid 1px;
       content: '';
       position: absolute;
       width: 18px;
       height: 18px;
-      left: -1px;
-      top: -1px;
+      left: -2px;
+      top: -2px;
     }
 
     /* Стилизуем чекбоксы */
