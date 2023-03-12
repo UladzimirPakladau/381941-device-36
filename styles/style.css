@@ -1506,6 +1506,23 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
     cursor: pointer;
   }
 
+  .range-toggle:hover {
+    opacity: 0.5;
+  }
+
+  .range-toggle:active {
+    background: #000000;
+  }
+
+  .range-toggle:focus:after {
+    outline-offset: 1px;
+    outline: #AF4FFF solid 1px;
+    content: '';
+    position: absolute;
+    width: 24px;
+    height: 24px;
+  } 
+
   .product-card-link-more {
     display: none;
     margin: 0 auto;
@@ -2187,8 +2204,9 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
       min-width: 70px;
       top: 17px;
       left: -4px;
-      opacity: 0.3;
+      color: #bcbcbc
       font-size: 14px;
+      color: #bcbcbc
     }
 
     .range-toggle-max:after {
@@ -2198,6 +2216,17 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
       top: 16px;
       left: -20px;
       font-size: 14px;
+    }
+
+    .range-toggle:focus:before {
+      outline-offset: 2px;
+      outline: #AF4FFF solid 1px;
+      content: '';
+      position: absolute;
+      width: 18px;
+      height: 18px;
+      left: -1px;
+      top: -1px;
     }
 
     /* Стилизуем чекбоксы */
