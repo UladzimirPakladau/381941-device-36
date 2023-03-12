@@ -1485,12 +1485,21 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
   /* Каталог */
 
   .product-card-link:hover .product-card-link-more  {
-    display: block;
+    display: flex;
     transition: 1s;
     position: absolute;
     min-width: 220px;
-    top: -195px;
     left: 70px;
+    opacity: 1;
+    top: 170px;
+  }
+
+  .product-card-link:hover {
+    opacity: 1;
+  }
+
+  .product-card-link:hover img{
+    opacity: 0.3;
   }
 
   .product-card-link-more {
@@ -1773,6 +1782,7 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
     .product-card-link {
       text-decoration: none;
       position: relative;
+      display: block;
     }
 
     .pagination {
