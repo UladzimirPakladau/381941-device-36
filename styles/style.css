@@ -67,6 +67,7 @@ button:focus {
   opacity: 1;
   box-sizing: border-box;
   outline: #AF4FFF solid 1px;
+  outline-offset: 1px;
 }
 
 select:hover {
@@ -77,6 +78,7 @@ select:focus {
   opacity: 1;
   box-sizing: border-box;
   outline: #AF4FFF solid 1px;
+  outline-offset: 1px;
 }
 
 input:hover {
@@ -89,10 +91,8 @@ input:active {
 
 input:focus {
   opacity: 1;
-  box-sizing: border-box;
   outline: #AF4FFF solid 1px;
 }
-
 
 select:active {
   opacity: 0.3;
@@ -253,7 +253,7 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
     position: absolute;
     opacity: 1;
     outline: #AF4FFF solid 1px;
-}
+  }
 
   .top-panel-button:focus:after {
     content: '';
@@ -265,19 +265,19 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
     position: absolute;
     opacity: 1;
     outline: #AF4FFF solid 1px;
-}
+  }
 
-.top-panel-input:focus {
+  .top-panel-input:focus {
     opacity: 1;
     box-sizing: border-box;
     outline: inherit;
-}
+  }
 
-.top-panel-button:focus {
+  .top-panel-button:focus {
     opacity: 1;
     box-sizing: border-box;
     outline: inherit;
-}
+  }
 
   .top-panel-button {
     background: transparent;
@@ -353,6 +353,7 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
     position: relative;
     padding: 20px;
     padding-left: 0;
+    padding-right: 68px;
   }
 
   .navigation-link:last-child {
@@ -433,7 +434,7 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
     background-image: url(../img/header/plus-icon.svg);
     background-repeat: no-repeat;
     top: 5px;
-    right: -45px;
+    right: 1px;
     z-index: 26;
   }
 
@@ -1945,10 +1946,14 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
       margin: 0 auto;
     }
 
-    .delivery-popup-email.delivery-popup-item:after {
+    .user-email-icon:before {
       content: 'Забавный у Вас адрес';
       position: absolute;
-      bottom: -5px;
+      bottom: -10px;
+    }
+
+    .delivery-input:invalid + .user-email-icon:before {
+      color: #ff3d3d;
     }
 
     .delivery-info {
@@ -2046,6 +2051,16 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
       height: 60px;
       background: #F0F0F0;
       border: 0px;
+    }
+
+
+    .delivery-input:invalid {
+      outline-offset: 1px;
+      outline: #ff3d3d solid 1px;
+    }
+
+    .delivery-input:invalid + .user-email-icon:after {
+      color: #ff3d3d;
     }
 
     .delivery-popup-name .delivery-input, .delivery-popup-email .delivery-input, .delivery-popup-text .delivery-input {
