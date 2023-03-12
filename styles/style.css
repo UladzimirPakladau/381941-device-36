@@ -514,15 +514,15 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
     position: absolute;
     padding: 3px 1px 0 1px;
     border-radius: 50px;
-    width: 20px;
-    height: 20px;
+    width: 18px;
+    height: 18px;
     display: block;
     text-align: center;
     font-size: 12px;
     line-height: 13px;
     font-weight: 400;
     top: 25px;
-    left: 4px;
+    left: 3px;
     border-width: inherit;
     border: inherit;
   }
