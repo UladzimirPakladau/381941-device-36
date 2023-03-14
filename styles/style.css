@@ -526,6 +526,8 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
 
   .content-main-slider-box {
     position: relative;
+    align-self: end;
+    top: -80px;
   }
 
   .main-slider-box {
@@ -691,7 +693,6 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
     gap: 20px;
     position: relative;
     bottom: 67px;
-
   }
 
   .main-slider {
