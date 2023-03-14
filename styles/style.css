@@ -1255,6 +1255,7 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
     padding: 0;
     margin: 0;
     margin-bottom: 57px;
+    max-width: 450px;
   }
 
   .footer-contacts-address {
@@ -1266,6 +1267,7 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
     font-style: normal;
     position: relative;
     letter-spacing: -0.05px;
+    margin-bottom: 64px;
   }
 
   .footer-contacts-logo {
@@ -1288,7 +1290,6 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
     display: block;
     border-bottom: 6px solid #FFC700;
     position: absolute;
-    bottom: 21px;
     left: 1px;
   }
 
