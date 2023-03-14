@@ -4,9 +4,10 @@
 	<meta charset="utf-8">
 	<title>HTML Academy: Девайс</title>
 	<meta name="description" content="Device — Интернет магазин электроники">
-  	<meta name="viewport" content="width=device-width">
+	<meta name="viewport" content="width=device-width">
 	<link rel="stylesheet" href="styles/style.css">
-	<link rel="icon" href="img/misc/favicon.ico">	
+	<link rel="icon" href="img/misc/favicon.ico">
+	<meta name="viewport" content="width=device-width, initial-scale=1">	
 </head>
 <body>
 
@@ -14,12 +15,11 @@
 		<div class="page-header-wrapper">	
 			<img class="logo" src="img/header/logo.svg" width="145" height="36" alt="Логотип интернет магазина «Девайс»">
 
-			<!-- Начало верхней панели: поиск, кнопка входа и корзина -->
 			<div class="top-panel">
 				<div class="top-panel-search">
 					<form class="top-panel-form" action="https://echo.htmlacademy.ru/" method="POST">
-							<input id="search" class="top-panel-input" type="search" placeholder="Поиск по сайту" required>
-							<label for="search" class="top-panel-label"><span class="visually-hidden">Поиск</span></label>													
+						<input id="search" class="top-panel-input" type="search" placeholder="Поиск по сайту" required>
+						<label for="search" class="top-panel-label"><span class="visually-hidden">Поиск</span></label>													
 						<button class="top-panel-button" type="submit">Найти</button>
 					</form>
 				</div>
@@ -35,14 +35,14 @@
 					<a class="cart-link" href="#"><div class="added-item-amount">2</div>Корзина</a>
 					<div class="user-cart-box-popup">
 						<div class="user-cart-box-items">
-							<a class="user-cart-box-items-link">
+							<a href="#" class="user-cart-box-items-link">
 								<img class="user-cart-item" src="img/products/small-selfie-stick.jpg" alt="Любительская селфи-палка маленькая на белом фоне" width="39" height="43">
 								<div class="user-cart-text">Любительская селфи-палка</div>
 							</a>
 							<button class="user-cart-close" aria-label="Закрыть"></button>
 						</div>
 						<div class="user-cart-box-items">
-							<a class="user-cart-box-items-link">
+							<a href="#" class="user-cart-box-items-link">
 								<img class="user-cart-item" src="img/products/small-pro-stick.jpg" alt="Любительская селфи-палка маленькая на белом фоне" width="39" height="43">
 								<div class="user-cart-text">Профессиональная селфи-палка</div>
 							</a>
@@ -59,7 +59,6 @@
 				</div>
 
 			</div>
-			<!-- Конец верхней панели -->
 
 			<nav class="navigation">
 				<ul class="navigation-catalog-box">
@@ -95,7 +94,6 @@
 
 		<h1 class="visually-hidden">Интернет-магазин «Девайс»</h1>
 		
-		<!-- Начало блока со слайдером -->
 		<section class="main-slider container">
 			<h2 class="visually-hidden">Слайдер на главной</h2>
 			<div class="main-slider-box">
@@ -193,9 +191,7 @@
 
 			</div>	
 		</section>
-		<!-- Конец блока со слайдером -->
 
-		<!-- Начало блока популярных товаров -->
 		<section class="products container">
 			<h2 class="visually-hidden">Популярные товары</h2>
 			<ul class="products-list">
@@ -253,9 +249,7 @@
 				</li>
 			</ul>
 		</section>	  
-		<!-- Конец блока популярных товаров -->
 
-		<!-- Начало блока преимуществ -->
 		<section class="advantages">
 			<div class="advantages-container container">
 				<div class="tabs">
@@ -295,25 +289,19 @@
 				</div>
 			</div>
 		</section>
-		<!-- Конец блока преимуществ-->
 
-
-		<!-- Начало блока инфобокс -->
 		<article class="infobox container">
-			<div class="infobox-wrapper">
-				<h2 class="visually-hidden">Доставка</h2>
+			<h2 class="visually-hidden">Доставка</h2>
+			<a href="#" class="infobox-wrapper">				
 				<div class="car-icon-wrapper">
 				</div>
 				<div class="infobox-title">Доставим редкий товар под заказ</div>
 				<div class="info-icon">
 					<span class="info-icon-item">i</span>
 				</div>
-			</div>
+			</a>
 		</article>
-		<!-- Конец блока инфобокс -->
 
-
-		<!-- Начало блока о компании  -->
 		<section class="about container">
 			<div class="about-wrapper">
 				<h2 class="about-title">О нас</h2>
@@ -345,10 +333,8 @@
 				<a class="write-us button" href="#">Напишите нам</a>
 			</div>
 		</section>
-		<!-- Конец блока о компании -->
 	</main>	
 
-	<!-- Начало блока подписки -->
 	<article class="subscribe">
 		<div class="subscribe-wrapper container">
 			<h2 class="visually-hidden">Подписка на рассылку</h2>
@@ -359,10 +345,9 @@
 			<div class="subscribe-row second-subscribe-row">
 				<div class="subscribe-form-box">
 					<form action="https://echo.htmlacademy.ru/" method="post">
-						<div class="subscribe-form-box-wrapper">
-							<label class="subscribe-form-box-label">
-								<input type="text" name="signup-email" id="signup-email" placeholder="Ваш e-mail" required>
-							</label>	
+						<div class="subscribe-form-box-wrapper">							
+								<input type="text" name="signup-email" id="signup-email" class="signup-email-input" placeholder="Ваш e-mail" required>
+								<label for="signup-email" class="subscribe-form-box-label"></label>	
 							<button class="subscribe-form-button button" type="submit">Подписаться</button>
 						</div>
 					</form>
@@ -371,9 +356,6 @@
 			</div>
 		</div>
 	</article>
-	<!-- Конец блока подписки -->
-
-	<!-- Начало поап доставки -->
 
 	<article class="delivery-popup popup-switcher">
 		<form class="delivery-popup-form" action="https://echo.htmlacademy.ru/" method="post" target="_blank">
@@ -402,25 +384,21 @@
 					<div class="delivery-popup-label">Количество: <span class="delivery-info">i</span>
 						<div class="hover-info">Постараемся найти, сколько нужно. Привезём сколько получится по требованиям к провозу багажа.</div>
 					</div>
-						<div class="delivery-popup-number-wrapper">
-							<div class="number-minus-wrapper">
-								<a href="#" class="number-minus" aria-label="munis"></a>
-							</div>
-							<input class="delivery-popup-number-text delivery-input" type="text" name="count" value="1">
-							<div class="number-plus-wrapper">		
-								<a href="#" class="number-plus" aria-label="plus"></a>
-							</div>	
+					<div class="delivery-popup-number-wrapper">
+						<div class="number-minus-wrapper">
+							<a href="#" class="number-minus" aria-label="munis"></a>
 						</div>
+						<input class="delivery-popup-number-text delivery-input" type="text" name="count" value="1">
+						<div class="number-plus-wrapper">		
+							<a href="#" class="number-plus" aria-label="plus"></a>
+						</div>	
+					</div>
 				</div>	  
 				<button class="delivery-popup-button button" type="submit">Отправить</button>   
 			</fieldset>
 		</form>			
 	</article>
 
-	<!-- Конец поап доставки -->
-
-
-	
 	<footer class="page-footer">
 		<div class="page-footer-wrapper container">
 			<div class="footer-contacts">
@@ -471,7 +449,7 @@
 			</div>
 		</div>
 	</footer>
-<script src="js/popup.js"></script>
-<script src="js/slider.js"></script>		
+	<script src="js/popup.js"></script>
+	<script src="js/slider.js"></script>		
 </body>
 </html>
