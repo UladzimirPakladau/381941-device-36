@@ -145,9 +145,6 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
 
   /* Хэдэр */
 
-  .logo:hover {
-    opacity: 0.6;
-  }
   .logo:focus {
     opacity: 1;
   }
@@ -693,7 +690,8 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
     justify-content: center;
     gap: 20px;
     position: relative;
-    top: -67px;
+    bottom: 67px;
+
   }
 
   .main-slider {
