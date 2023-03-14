@@ -45,6 +45,10 @@ a:focus {
   outline-offset: 1px;
 }
 
+a:not([href]):hover {
+ opacity: inherit
+}
+
 .error {
   outline: #FF3D3D auto 1px;
   box-sizing: border-box;
@@ -1767,7 +1771,7 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
       position: absolute;
     }
 
-    .new-product-card:before {
+    .new-product-card a:before {
       content: '';
       width: 60px;
       height: 60px;
@@ -1778,6 +1782,10 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
       z-index: 60;
       right: 27px;
       top: 27px;
+    }
+
+    .product-card-link:hover:before {
+    opacity: 0.3;
     }
 
     .button-bottom:before {
