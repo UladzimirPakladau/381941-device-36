@@ -1607,6 +1607,17 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
     margin-right: 40px;
   }
 
+  .pagination-show-more:hover {
+    opacity: 1;
+    border: 3px solid #000000;
+  }
+
+  .pagination-show-more:active {
+    opacity: 0.3;
+    border: 3px solid #000000;
+    color: #000000;
+  }
+
   .pagination-show-more {
     padding: 15px 39px;
     border: 3px solid #E5E5E5;
@@ -1857,7 +1868,6 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
-      padding: 15px 11px 13px 15px;
       list-style: none;
       margin: 0 40px;
       align-items: baseline;
@@ -1922,12 +1932,12 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
       font-family: 'Raleway', 'Arial', sans-serif;
       font-weight: 800;
       font-size: 18px;
-      line-height: 21px;
+      line-height: 28px;
       letter-spacing: 0.2em;
       text-transform: uppercase;
       color: #444444;
       opacity: 0.3;
-      padding: 11px 10px;
+      padding: 20px 20px;
     }
 
     .pagination-next {
@@ -2318,6 +2328,7 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
       align-items: center;
       user-select: none;
       cursor: pointer;
+      position: relative;
     }
 
     .control:before {
@@ -2589,10 +2600,12 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
       background: #000000;
     }
 
-    .control:focus:after {
-      outline-offset: 5px;
+    .control-input:focus + .control:after {
+      outline-offset: 13px;
       outline: #AF4FFF solid 1px;
       content: '';
+      left: 12px;
+      position: absolute;
     }
 
     .control:focus:after {
@@ -2604,7 +2617,7 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
       height: 24px;
     } 
 
-    .control-radio:focus:after {
+    .control-radio-input:focus + .control-radio:after {
       outline-offset: 1px;
       outline: #AF4FFF solid 1px;
       content: '';
