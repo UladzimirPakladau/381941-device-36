@@ -1628,7 +1628,8 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
   }
 
   .catalog-page.page-header:after {
-    height: 186px;
+    min-height: 186px;
+    height: inherit;
   }
 
   .catalog-page .user-navigation-link, .catalog-page .user-navigation-exit-link, .catalog-page .compare-link, .catalog-page .cart-link {
@@ -1654,6 +1655,9 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
 
   .catalog-page .added-item-amount {
     left: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   /* filter */
