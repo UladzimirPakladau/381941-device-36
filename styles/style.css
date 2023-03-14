@@ -2626,7 +2626,7 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
       height: 24px;
     } 
 
-.catalog-navigation .navigation-link:hover .sub-list:before {
+.catalog-navigation:hover .sub-list:before {
     content: '';
     width: 1160px;
     height: 146px;
@@ -2638,7 +2638,7 @@ header, main, .page-footer-wrapper, .subscribe-wrapper {
     transition: 1s;
 }
 
-.catalog-navigation .navigation-link:hover .sub-list {
+.catalog-navigation:hover .sub-list {
     display: grid;
     position: absolute;
     padding-top: 15px;
