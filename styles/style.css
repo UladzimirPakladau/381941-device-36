@@ -790,10 +790,6 @@ button.main-slider-arrow.right {
   grid-template-columns: 280px 350px 280px;
 }
 
-.tabs input { 
-  display: none;
-}
-
 .advantages-content-box { 
   visibility: hidden;
   padding: 15px; 
@@ -1928,7 +1924,7 @@ b.product-card-price {
   bottom: -10px;
 }
 
-.delivery-input:invalid + .user-email-icon:before {
+.delivery-input.invalid + .user-email-icon:before {
   color: #ff3d3d;
 }
 
@@ -2029,12 +2025,12 @@ b.product-card-price {
   border: 0px;
 }
 
-.delivery-input:invalid {
+.delivery-input.invalid {
   outline-offset: 1px;
   outline: #ff3d3d solid 1px;
 }
 
-.delivery-input:invalid + .user-email-icon:after {
+.delivery-input.invalid + .user-email-icon:after {
   color: #ff3d3d;
 }
 
@@ -2614,7 +2610,7 @@ b.product-card-price {
   opacity: 1;
 }
 
-.signup-email-input:invalid {
+.signup-email-input.invalid {
   border-bottom: 3px solid #ff3d3d;
 }
 
